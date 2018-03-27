@@ -50,7 +50,7 @@ html, body {
 }
 
 .movie {
-    width: 165px;
+    width: 150px;
     height: 250px;
     /* border: 2px solid #000; */
 
@@ -89,6 +89,7 @@ html, body {
 .standard-hover {
     border: 2px solid #ba6144;
     opacity: 0.3;
+    cursor: pointer;
 }
 
 .loading-hover {
@@ -126,36 +127,40 @@ html, body {
 .movie-database button {
     color: #fff;
     opacity: 0;
+    cursor: pointer;
 }
 
 .movie-database button.update {
     position: absolute;
-    top:-60px;
+    top:-55px;
     color: #fff;
-    left: 115px;
+    left: 103px;
     border: transparent;
     background-color: transparent;
     font-size: 10px;
+    cursor: pointer;
 
 }
 
 .movie-database button.edit {
     position: absolute;
-    top:-60px;
-    right: 110px;
+    top:-55px;
+    right: 100px;
     border: transparent;
     background-color: transparent;
     font-size: 10px;
+    cursor: grab;
 
 }
 
 .movie-database button.delete {
     position: absolute;
-    top:-245px;
-    left: 115px;
+    top:-223px;
+    left: 100px;
     border: transparent;
     background-color: transparent;
     font-size: 10px;
+    cursor: grab;
 
 }
 
@@ -172,5 +177,8 @@ html, body {
     position: fixed;
     z-index: 100000 !important;
 
+}
+.back-full {
+    cursor: pointer;
 }
 

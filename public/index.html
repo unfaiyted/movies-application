@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
-    <title>My Application</title>
+    <title>miniMovieDB</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="/style.css" />
@@ -10,7 +10,46 @@
 <body>
 
 <div id="movie-full" class="hide">
+
+
+
+    <div class="container">
+
+        <!-- Header of Full Movie Data view -->
+        <div class="row">
+            <div class="back-full p-2 ">
+                <i class="material-icons">chevron_left</i>
+                <span id="movie-big-title">Movie Title</span>
+            </div>
+
+        </div>
+
+
+
+        <div class="row">
+            <div class="col-4">
+                <img src="images/placeholder.png" alt="Placeholder" class="img-fluid" id="movie-big-img">
+                <span id="movie-big-rating">1</span><span>/10 </span> (<span id="movie-big-votes"></span> votes)
+            </div>
+            <div class="col-8">
+                <div class="movie-big-overview">
+                    <p id="movie-overview">???? </p>
+                    <hr>
+                    <span>Genres: </span> <span id="movie-big-genres"></span>
+                    <span>Release Date: </span>  <span id="movie-big-release"></span>
+                    <span id="movie-big-imdb"><a href="#">IMDB</a></span>
+                    <span id="movie-big-tagline">Tagline of Movie </span>
+
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
     <div class="bg-container"></div>
+
 </div>
 
 
@@ -72,7 +111,6 @@
         </div>
 
 </div>
-
 
 <footer>
 

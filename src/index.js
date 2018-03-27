@@ -8,23 +8,24 @@
  * require style imports
  */
 const $ = require('jquery');
-const {getMovies, getMovieDBData, deleteMovie, addMovie, addMovieData, getMovie} = require('./api.js');
+const {getMovies, getMovieDBData, deleteMovie, addMovie, addMovieData, getFullMovieData, getMovie} = require('./api.js');
 const {sayHello} = require('./hello.js');
 
-let delay = makeDelay(250);
+let delay = makeDelay(1000);
 
 sayHello('Dane');
 
+// Creates the primary movie list
 function movieList(query, sortBy) {
     if (typeof query === 'undefined') { query = ''; }
     if (typeof sortBy === 'undefined') { sortBy = ''; }
 
     getMovies(query, sortBy).then((movies) => {
         //console.log('Here are all the movies:');
-        movies.forEach(({title, rating, id, tvdb}) => {
+        movies.forEach(({title, rating, id, tvdb, imdb_id}) => {
 //    console.log(`id#${id} - ${title} - rating: ${rating}`);
 
-            let moviePoster = "images/placeholder.png"
+            let moviePoster = "images/placeholder.png";
             let movieBackdrop = "";
 
             if (tvdb) {
@@ -40,6 +41,7 @@ function movieList(query, sortBy) {
                 $('<div class="movie-title text-truncate">').text(title),
                 $('<div class="movie-database">').append(
                     $(`<img src="images/loader.svg" class="loading-data hide" id="loading-movie-${id}">`).text(''),
+                    $(`<input type="hidden" id="movie-imdb-${id}"  value="${imdb_id}">`).text(''),
                     $(`<button id="update-movie-${id}" class="update" value="${id}">`).html("<i class=\"material-icons\">autorenew</i>"),
                     $(`<button id="edit-movie-${id}" class="edit" value="${id}">`).html('<i class="material-icons">create</i>'),
                     $(`<button id="delete-movie-${id}" class="delete" value="${id}">`).html('<i class="material-icons">delete_forever</i>'),
@@ -49,9 +51,9 @@ function movieList(query, sortBy) {
             $(`#img-${id}, #update-movie-${id}, #edit-movie-${id}, #delete-movie-${id}`).hover(function () {
                 $('.bg-container').css('background-image', `url('${movieBackdrop}')`);
                 $(`#img-${id}`).addClass('standard-hover');
-                $(`#update-movie-${id}`).css('opacity',1);
-                $(`#edit-movie-${id}`).css('opacity',1);
-                $(`#delete-movie-${id}`).css('opacity',1);
+                $(`#update-movie-${id}`).css('opacity',0.6);
+                $(`#edit-movie-${id}`).css('opacity',0.6);
+                $(`#delete-movie-${id}`).css('opacity',0.6);
 
             }, function () {
                 $(`#update-movie-${id}`).css('opacity',0);
@@ -62,7 +64,7 @@ function movieList(query, sortBy) {
             });
 
             $(`#img-${id}`).click(function() {
-                $("#movie-full").removeClass('hide');
+                     displayMovie(id);
             });
 
             $(`#delete-movie-${id}`).click(function () {
@@ -87,7 +89,7 @@ function movieList(query, sortBy) {
                 $(`#loading-movie-${id}`).removeClass('hide');
                 $(`#img-${id}`).addClass('loading-hover');
 
-                const movieId = $(this).val();
+                const movieId = $(`#movie-imdb-${id}`).val();
 
                 $(this).off('click');
 
@@ -98,22 +100,33 @@ function movieList(query, sortBy) {
 
                         const movie = movies.movie_results[0];
 
-                        addMovieData(id,
-                            {
-                                title: movie.title,
-                                rating: movie.vote_average,
-                                tvdb: movie
+
+                        getFullMovieData(movie.id).then(movie => {
+
+
+                            addMovieData(id,
+                                {
+                                    title: movie.title,
+                                    rating: movie.vote_average,
+                                    tvdb: movie
+                                });
+
+
+
+                            $(`#img-${id}`).attr('src', `https://image.tmdb.org/t/p/w500/${movie.poster_path}`);
+                            $('.bg-container').css('background-image', `url('https://image.tmdb.org/t/p/original/${movie.backdrop_path}')`);
+
+                            $(`#img-${id}`).hover(function () {
+                                $('.bg-container').css('background-image', `url('https://image.tmdb.org/t/p/original/${movie.backdrop_path}')`);
                             });
 
-                        $(`#img-${id}`).attr('src', `https://image.tmdb.org/t/p/w500/${movie.poster_path}`);
-                        $('.bg-container').css('background-image', `url('https://image.tmdb.org/t/p/original/${movie.backdrop_path}')`);
+                            $(`#loading-movie-${id}`).addClass('hide');
+                            $(`#img-${id}`).removeClass('loading-hover');
 
-                        $(`#img-${id}`).hover(function () {
-                            $('.bg-container').css('background-image', `url('https://image.tmdb.org/t/p/original/${movie.backdrop_path}')`);
                         });
 
-                        $(`#loading-movie-${id}`).addClass('hide');
-                        $(`#img-${id}`).removeClass('loading-hover');
+
+
 
 
                     }).catch((error) => {
@@ -138,6 +151,39 @@ function movieList(query, sortBy) {
     });
 }
 
+// Pulls relevent movie data and displays full screen
+function displayMovie(id) {
+
+    //Loading Spinner
+    getMovie(id).then(movie => {
+        const m = movie;
+
+        console.log(m);
+
+        $(`#movie-big-img`).attr('src', `https://image.tmdb.org/t/p/w500/${m.tvdb.poster_path}`);
+        $('#movie-overview').text(m.tvdb.overview);
+        $('#movie-big-title').text(m.title);
+        $('#movie-big-rating').text(m.rating);
+        $('#movie-big-votes').text(m.tvdb.vote_count);
+        $('#movie-big-genres').text(function () {
+            let list =  ''
+            m.tvdb.genres.forEach(function (item) {
+               list += item.name +', '
+            });
+            return list;
+        });
+        $('#movie-big-release').text(m.tvdb.release_date);
+        $('#movie-big-tagline').text(m.tvdb.tagline);
+        // $('#movie-big-release-date').text(m.tvdb.release_date);
+        $("#movie-full").removeClass('hide');
+        // Display movie info
+
+    });
+
+
+}
+
+// Delay function to prevent too many requests sent to server repeatedly.
 function makeDelay(ms) {
     var timer = 0;
     return function(callback){
@@ -146,7 +192,7 @@ function makeDelay(ms) {
     };
 };
 
-
+// Add Movie
 $(`#submit-new-movie`).click(function (e) {
     e.preventDefault();
     console.log('adding movie');
@@ -171,9 +217,6 @@ $(`#submit-new-movie`).click(function (e) {
 
 });
 
-
-
-
 $('#search-movies').on('input', function () {
 
     delay(function () {
@@ -193,6 +236,10 @@ $('#search-movies').on('input', function () {
 
 $("body").keyup(function(e) {
     (e.keyCode === 27) ? $('#movie-full').addClass('hide') : false;
+});
+
+$('.back-full').click(function() {
+   $('#movie-full').addClass('hide');
 });
 
 $('.sort-menu').click(function () {
