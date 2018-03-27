@@ -22,10 +22,12 @@ getMovies().then((movies) => {
         $('<div class="movie p-2 m-2">').append(
             $('<div class="movie-img">').append(
                 $(`<img src="images/placeholder.png" id="img-${id}" class="img-fluid">`)),
-            $('<div class="movie-title">').text(title),
+            $('<div class="movie-title text-truncate">').text(title),
             // $('<div class="movie-rating">').text(rating),
             $('<div class="movie-database">').append(
-                $(`<button type="submit" id="update-movie-${id}" value="${id}">`).text("Get Data"),
+                $(`<button id="update-movie-${id}" class="update" value="${id}">`).text("u"),
+                $(`<button id="edit-movie-${id}" class="edit" value="${id}">`).text("e"),
+                $(`<button id="delete-movie-${id}" class="delete" value="${id}">`).text("x"),
             )).appendTo('#moviesList');
 
 
