@@ -2,20 +2,61 @@ html, body {
     height: 100%;
     background-color: #000;
     background-image: url("images/bg.png");
+    margin:0;
+    padding:0;
+
 }
 
 .loading-container {
-    position: relative;
+    position: absolute;
     top: 50%;
     transform: translateY(-100%);
     text-align: center;
+    z-index: 1000000 !important;
 }
 
-.container {
-    background-color: #a9abad;
+.page-container {
+    background-color: rgba(0,0,0,0.0);
+    width: 100%;
 }
-
 
 .movie {
-    width: 20%;
+    width: 165px;
+    /* border: 2px solid #000; */
+
+}
+
+.first-header {
+    background-color: #14191D; /*rgba(0,0,0,1)*/
+    color: #fff;
+}
+
+.second-header {
+    top: 58px;
+    background-color: #3C4952; /* rgba(0,0,0,1);*/
+    color: #fff;
+}
+
+
+.menu-left {
+    background-color: rgba(0,0,0,0.5);
+}
+
+.movie img {
+
+    background: #ccc;
+    border: 2px solid #ccc;
+    position:relative;
+    box-shadow: -1px 0px 8px rgba(0, 0, 0, 0.80);
+    -moz-box-shadow: -1px 0px 8px rgba(0, 0, 0, 0.80);
+    -webkit-box-shadow: -1px 0px 8px rgba(0, 0, 0, 0.80);
+}
+.movie img:hover {
+    border: 2px solid #BA8043;
+}
+
+.movie-title {
+    color: #fff;
+    font-size: 12px;
+    padding-top: 8px;
 }
