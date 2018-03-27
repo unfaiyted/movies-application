@@ -1,23 +1,48 @@
 //https://api.themoviedb.org/3/movie/550?api_key=0c3cf3e726b6d3566fbe38b74c239e5b
 
 module.exports = {
-    getMovies: () => {
-    return fetch('/api/movies')
+    getMovies: (query, sort) => {
+        if (sort !== '') {
+
+        }
+    return fetch(`/api/movies?q=${query}&_sort=${sort}`)
       .then(response => response.json());
     },
+    getMovie: (id) => {
+        return fetch(`/api/movies/${id}`)
+            .then(response => response.json());
+    },
     // Add new movie to website
-    addMovie: (movieObject) => {
+    addMovie: (movie) => {
+        return fetch(`/api/movies`,
+            {
+                method: 'post',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(movie)
+            }).then(response => response.json());
 
     },
     //Change value of data in movies
     editMovie: (id) => {
 
-
     },
     //Delete existing movie=
     deleteMovie: (id) => {
     // delete existing movies
+        return fetch(`/api/movies/${id}`,
+            {
+                method: 'delete'
+            })
+            .then(response => response.json());
 
+    },
+    searchMovies: (query) => {
+            return fetch('/api/movies',
+                {  "q": query }
+            )
+                .then(response => response.json());
     },
     getMovieDBData: (external_id) => {
         const data= {
@@ -28,6 +53,18 @@ module.exports = {
 
         return fetch(`https://api.themoviedb.org/3/find/${external_id}?api_key=${data.api_key}&language=${data.langauge}&external_source=${data.external_source}`)
             .then(response => response.json());
+    },
+    addMovieData: (id, data) => {
+        return fetch(`/api/movies/${id}/`,
+            {
+                method: 'put',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
 
-    }
+            }).then(response => response.json());
+    },
 };
+
+

@@ -1,150 +1,352 @@
 {
   "movies": [
     {
-      "title": "The Shawshank Redemption",
-      "rank": "1",
-      "id": "tt0111161",
-      "rating": 8
-    },
-    {
-      "title": "The Godfather",
-      "rank": "2",
-      "id": "tt0068646",
-      "rating": 8
-    },
-    {
-      "title": "The Godfather: Part II",
-      "rank": "3",
-      "id": "tt0071562",
-      "rating": 8
-    },
-    {
-      "title": "Pulp Fiction",
-      "rank": "4",
-      "id": "tt0110912",
-      "rating": 8
-    },
-    {
       "title": "The Good, the Bad and the Ugly",
-      "rank": "5",
-      "id": "tt0060196",
-      "rating": 8
-    },
-    {
-      "title": "The Dark Knight",
-      "rank": "6",
-      "id": "tt0468569",
-      "rating": 8
-    },
-    {
-      "title": "12 Angry Men",
-      "rank": "7",
-      "id": "tt0050083",
-      "rating": 8
-    },
-    {
-      "title": "Schindler's List",
-      "rank": "8",
-      "id": "tt0108052",
-      "rating": 8
+      "rating": 8.2,
+      "tvdb": {
+        "id": 429,
+        "video": false,
+        "vote_count": 2876,
+        "vote_average": 8.2,
+        "title": "The Good, the Bad and the Ugly",
+        "release_date": "1966-12-23",
+        "original_language": "it",
+        "original_title": "Il buono, il brutto, il cattivo",
+        "genre_ids": [
+          37
+        ],
+        "backdrop_path": "/xGC2fY5KFmtuXnsuQwYQKFOLZFy.jpg",
+        "adult": false,
+        "overview": "While the Civil War rages between the Union and the Confederacy, three men – a quiet loner, a ruthless hit man and a Mexican bandit – comb the American Southwest in search of a strongbox containing $200,000 in stolen gold.",
+        "poster_path": "/wfPHdfofBD5PN96dV96a51B3Ja2.jpg"
+      },
+      "id": "tt0060196"
     },
     {
       "title": "The Lord of the Rings: The Return of the King",
-      "rank": "9",
-      "id": "tt0167260",
-      "rating": 8
+      "rating": 8.2,
+      "tvdb": {
+        "id": 122,
+        "video": false,
+        "vote_count": 9638,
+        "vote_average": 8.2,
+        "title": "The Lord of the Rings: The Return of the King",
+        "release_date": "2003-12-01",
+        "original_language": "en",
+        "original_title": "The Lord of the Rings: The Return of the King",
+        "genre_ids": [
+          28,
+          12,
+          14
+        ],
+        "backdrop_path": "/8BPZO0Bf8TeAy8znF43z8soK3ys.jpg",
+        "adult": false,
+        "overview": "Aragorn is revealed as the heir to the ancient kings as he, Gandalf and the other members of the broken fellowship struggle to save Gondor from Sauron's forces. Meanwhile, Frodo and Sam bring the ring closer to the heart of Mordor, the dark lord's realm.",
+        "poster_path": "/rCzpDGLbOoPwLjy3OAm5NUPOTrC.jpg"
+      },
+      "id": "tt0167260"
     },
     {
       "title": "Fight Club",
-      "rank": "10",
-      "id": "tt0137523",
-      "rating": 8
-    },
-    {
-      "title": "Star Wars: Episode V - The Empire Strikes Back",
-      "rank": "11",
-      "id": "tt0080684",
-      "rating": 8
+      "rating": 8.3,
+      "tvdb": {
+        "id": 550,
+        "video": false,
+        "vote_count": 11786,
+        "vote_average": 8.3,
+        "title": "Fight Club",
+        "release_date": "1999-10-15",
+        "original_language": "en",
+        "original_title": "Fight Club",
+        "genre_ids": [
+          18
+        ],
+        "backdrop_path": "/mMZRKb3NVo5ZeSPEIaNW9buLWQ0.jpg",
+        "adult": false,
+        "overview": "A ticking-time-bomb insomniac and a slippery soap salesman channel primal male aggression into a shocking new form of therapy. Their concept catches on, with underground \"fight clubs\" forming in every town, until an eccentric gets in the way and ignites an out-of-control spiral toward oblivion.",
+        "poster_path": "/adw6Lq9FiC9zjYEpOqfq03ituwp.jpg"
+      },
+      "id": "tt0137523"
     },
     {
       "title": "The Lord of the Rings: The Fellowship of the Ring",
-      "rank": "12",
-      "id": "tt0120737",
-      "rating": 8
+      "rating": 8.1,
+      "tvdb": {
+        "id": 120,
+        "video": false,
+        "vote_count": 10535,
+        "vote_average": 8.1,
+        "title": "The Lord of the Rings: The Fellowship of the Ring",
+        "release_date": "2001-12-18",
+        "original_language": "en",
+        "original_title": "The Lord of the Rings: The Fellowship of the Ring",
+        "genre_ids": [
+          28,
+          12,
+          14
+        ],
+        "backdrop_path": "/pIUvQ9Ed35wlWhY2oU6OmwEsmzG.jpg",
+        "adult": false,
+        "overview": "Young hobbit Frodo Baggins, after inheriting a mysterious ring from his uncle Bilbo, must leave his home in order to keep it from falling into the hands of its evil creator. Along the way, a fellowship is formed to protect the ringbearer and make sure that the ring arrives at its final destination: Mt. Doom, the only place where it can be destroyed.",
+        "poster_path": "/bi9JddwTwBt3ixGLAiMAF7OXMbV.jpg"
+      },
+      "id": "tt0120737"
     },
     {
-      "title": "One Flew Over the Cuckoo's Nest",
-      "rank": "13",
-      "id": "tt0073486",
-      "rating": 8
-    },
-    {
-      "title": "Inception",
-      "rank": "14",
-      "id": "tt1375666",
-      "rating": 8
-    },
-    {
-      "title": "Goodfellas",
-      "rank": "15",
-      "id": "tt0099685",
-      "rating": 8
+      "title": "GoodFellas",
+      "rating": 8.3,
+      "tvdb": {
+        "id": 769,
+        "video": false,
+        "vote_count": 3929,
+        "vote_average": 8.3,
+        "title": "GoodFellas",
+        "release_date": "1990-09-12",
+        "original_language": "en",
+        "original_title": "GoodFellas",
+        "genre_ids": [
+          80,
+          18
+        ],
+        "backdrop_path": "/xDEOxA01480uLTWuvQCw61VmDBt.jpg",
+        "adult": false,
+        "overview": "The true story of Henry Hill, a half-Irish, half-Sicilian Brooklyn kid who is adopted by neighbourhood gangsters at an early age and climbs the ranks of a Mafia family under the guidance of Jimmy Conway.",
+        "poster_path": "/hAPeXBdGDGmXRPj4OZZ0poH65Iu.jpg"
+      },
+      "id": "tt0099685"
     },
     {
       "title": "Star Wars",
-      "rank": "16",
-      "id": "tt0076759",
-      "rating": 8
+      "rating": 8.1,
+      "tvdb": {
+        "id": 11,
+        "video": false,
+        "vote_count": 8439,
+        "vote_average": 8.1,
+        "title": "Star Wars",
+        "release_date": "1977-05-25",
+        "original_language": "en",
+        "original_title": "Star Wars",
+        "genre_ids": [
+          28,
+          12,
+          878
+        ],
+        "backdrop_path": "/4iJfYYoQzZcONB9hNzg0J0wWyPH.jpg",
+        "adult": false,
+        "overview": "Princess Leia is captured and held hostage by the evil Imperial forces in their effort to take over the galactic Empire. Venturesome Luke Skywalker and dashing captain Han Solo team together with the loveable robot duo R2-D2 and C-3PO to rescue the beautiful princess and restore peace and justice in the Empire.",
+        "poster_path": "/btTdmkgIvOi0FFip1sPuZI2oQG6.jpg"
+      },
+      "id": "tt0076759"
     },
     {
       "title": "Seven Samurai",
-      "rank": "17",
-      "id": "tt0047478",
-      "rating": 8
+      "rating": 8.2,
+      "tvdb": {
+        "id": 346,
+        "video": false,
+        "vote_count": 1065,
+        "vote_average": 8.2,
+        "title": "Seven Samurai",
+        "release_date": "1954-04-26",
+        "original_language": "ja",
+        "original_title": "七人の侍",
+        "genre_ids": [
+          28,
+          18
+        ],
+        "backdrop_path": "/qPuNawmymdzSLQ6zAQeeIZxuNfY.jpg",
+        "adult": false,
+        "overview": "A samurai answers a village's request for protection after he falls on hard times. The town needs protection from bandits, so the samurai gathers six others to help him teach the people how to defend themselves, and the villagers provide the soldiers with food. A giant battle occurs when 40 bandits attack the village.",
+        "poster_path": "/v6xrz4fr92KY1oNC3HsEvrsvR1n.jpg"
+      },
+      "id": "tt0047478"
     },
     {
       "title": "Forrest Gump",
-      "rank": "18",
-      "id": "tt0109830",
-      "rating": 8
+      "rating": 8.3,
+      "tvdb": {
+        "id": 13,
+        "video": false,
+        "vote_count": 10185,
+        "vote_average": 8.3,
+        "title": "Forrest Gump",
+        "release_date": "1994-07-06",
+        "original_language": "en",
+        "original_title": "Forrest Gump",
+        "genre_ids": [
+          35,
+          18,
+          10749
+        ],
+        "backdrop_path": "/ctOEhQiFIHWkiaYp7b0ibSTe5IL.jpg",
+        "adult": false,
+        "overview": "A man with a low IQ has accomplished great things in his life and been present during significant historic events - in each case, far exceeding what anyone imagined he could do. Yet, despite all the things he has attained, his one true love eludes him. 'Forrest Gump' is the story of a man who rose above his challenges, and who proved that determination, courage, and love are more important than ability.",
+        "poster_path": "/yE5d3BUhE8hCnkMUJOo1QDoOGNz.jpg"
+      },
+      "id": "tt0109830"
     },
     {
       "title": "The Matrix",
-      "rank": "19",
-      "id": "tt0133093",
-      "rating": 8
+      "rating": 8,
+      "tvdb": {
+        "id": 603,
+        "video": false,
+        "vote_count": 10601,
+        "vote_average": 8,
+        "title": "The Matrix",
+        "release_date": "1999-03-30",
+        "original_language": "en",
+        "original_title": "The Matrix",
+        "genre_ids": [
+          28,
+          878
+        ],
+        "backdrop_path": "/dbBwK83VsgkDPvDLk9FcpzTDExh.jpg",
+        "adult": false,
+        "overview": "Set in the 22nd century, The Matrix tells the story of a computer hacker who joins a group of underground insurgents fighting the vast and powerful computers who now rule the earth.",
+        "poster_path": "/hEpWvX6Bp79eLxY1kX5ZZJcme5U.jpg"
+      },
+      "id": "tt0133093"
     },
     {
       "title": "The Lord of the Rings: The Two Towers",
-      "rank": "20",
-      "id": "tt0167261",
-      "rating": 8
+      "rating": 8.1,
+      "tvdb": {
+        "id": 121,
+        "video": false,
+        "vote_count": 9063,
+        "vote_average": 8.1,
+        "title": "The Lord of the Rings: The Two Towers",
+        "release_date": "2002-12-18",
+        "original_language": "en",
+        "original_title": "The Lord of the Rings: The Two Towers",
+        "genre_ids": [
+          28,
+          12,
+          14
+        ],
+        "backdrop_path": "/dG4BmM32XJmKiwopLDQmvXEhuHB.jpg",
+        "adult": false,
+        "overview": "Frodo and Sam are trekking to Mordor to destroy the One Ring of Power while Gimli, Legolas and Aragorn search for the orc-captured Merry and Pippin. All along, nefarious wizard Saruman awaits the Fellowship members at the Orthanc Tower in Isengard.",
+        "poster_path": "/5VTN0pR8gcqV3EPUHHfMGnJYN9L.jpg"
+      },
+      "id": "tt0167261"
     },
     {
       "title": "City of God",
-      "rank": "21",
-      "id": "tt0317248",
-      "rating": 8
+      "rating": 8.2,
+      "tvdb": {
+        "adult": false,
+        "backdrop_path": "/k4BAPrE5WkNLvpsPsiMfu8W4Zyi.jpg",
+        "genre_ids": [
+          80,
+          18
+        ],
+        "id": 598,
+        "original_language": "pt",
+        "original_title": "Cidade de Deus",
+        "overview": "Cidade de Deus is a shantytown that started during the 1960s and became one of Rio de Janeiro’s most dangerous places in the beginning of the 1980s. To tell the story of this place, the movie describes the life of various characters, all seen by the point of view of the narrator, Buscapé. Buscapé was raised in a very violent environment. Despite the feeling that all odds were against him, he finds out that life can be seen with other eyes...",
+        "poster_path": "/gCqnQaq8T4CfioP9uETLx9iMJF4.jpg",
+        "release_date": "2002-02-05",
+        "title": "City of God",
+        "video": false,
+        "vote_average": 8.2,
+        "vote_count": 2233
+      },
+      "id": "tt0317248"
     },
     {
       "title": "Se7en",
-      "rank": "22",
-      "id": "tt0114369",
-      "rating": 8
+      "rating": 8.2,
+      "tvdb": {
+        "adult": false,
+        "backdrop_path": "/ba4CpvnaxvAgff2jHiaqJrVpZJ5.jpg",
+        "genre_ids": [
+          80,
+          9648,
+          53
+        ],
+        "id": 807,
+        "original_language": "en",
+        "original_title": "Se7en",
+        "overview": "Two homicide detectives are on a desperate hunt for a serial killer whose crimes are based on the \"seven deadly sins\" in this dark and haunting film that takes viewers from the tortured remains of one victim to the next. The seasoned Det. Sommerset researches each sin in an effort to get inside the killer's mind, while his novice partner, Mills, scoffs at his efforts to unravel the case.",
+        "poster_path": "/8zw8IL4zEPjkh8Aysdcd0FwGMb0.jpg",
+        "release_date": "1995-09-22",
+        "title": "Se7en",
+        "video": false,
+        "vote_average": 8.2,
+        "vote_count": 7291
+      },
+      "id": "tt0114369"
     },
     {
       "title": "The Silence of the Lambs",
-      "rank": "23",
+      "rating": 8.2,
+      "tvdb": {
+        "id": 274,
+        "video": false,
+        "vote_count": 5783,
+        "vote_average": 8.2,
+        "title": "The Silence of the Lambs",
+        "release_date": "1991-02-01",
+        "original_language": "en",
+        "original_title": "The Silence of the Lambs",
+        "genre_ids": [
+          80,
+          18,
+          53
+        ],
+        "backdrop_path": "/6IPmLUmer6yXrMrJuX9jY057GsH.jpg",
+        "adult": false,
+        "overview": "FBI trainee, Clarice Starling ventures into a maximum-security asylum to pick the diseased brain of Hannibal Lecter, a psychiatrist turned homicidal cannibal. Starling needs clues to help her capture a serial killer. But her Faustian relationship with Lecter soon leads to his escape, and now two deranged killers are on the loose.",
+        "poster_path": "/qjAyTj2BSth1EQ89vNfo0JYVPFN.jpg"
+      },
       "id": "tt0102926"
     },
     {
       "title": "Once Upon a Time in the West",
-      "rank": "24",
+      "rating": 8.1,
+      "tvdb": {
+        "id": 335,
+        "video": false,
+        "vote_count": 1402,
+        "vote_average": 8.1,
+        "title": "Once Upon a Time in the West",
+        "release_date": "1968-12-21",
+        "original_language": "it",
+        "original_title": "C'era una volta il West",
+        "genre_ids": [
+          37
+        ],
+        "backdrop_path": "/lagdbLlNPVVbFczUgRnGjdeKeQC.jpg",
+        "adult": false,
+        "overview": "This classic western masterpiece is an epic film about a widow whose land and life are in danger as the railroad is getting closer and closer to taking them over. A mysterious harmonica player joins forces with a desperado to protect the woman and her land.",
+        "poster_path": "/rVAHRtAMhV8QVXQMQ8NxNbZXCDp.jpg"
+      },
       "id": "tt0064116"
     },
     {
       "title": "Casablanca",
-      "rank": "25",
+      "rating": 8,
+      "tvdb": {
+        "id": 289,
+        "video": false,
+        "vote_count": 1813,
+        "vote_average": 8,
+        "title": "Casablanca",
+        "release_date": "1942-11-26",
+        "original_language": "en",
+        "original_title": "Casablanca",
+        "genre_ids": [
+          18,
+          10749
+        ],
+        "backdrop_path": "/xRqsFFteJrvLHxswk78NzU7zOrU.jpg",
+        "adult": false,
+        "overview": "In Casablanca, Morocco in December 1941, a cynical American expatriate meets a former lover, with unforeseen complications.",
+        "poster_path": "/9UViITBCKeLYWg8Wblbmb9l25mS.jpg"
+      },
       "id": "tt0034583"
     },
     {
@@ -155,113 +357,470 @@
     },
     {
       "title": "Raiders of the Lost Ark",
-      "rank": "27",
-      "id": "tt0082971",
-      "rating": 8
+      "rating": 7.8,
+      "tvdb": {
+        "id": 85,
+        "video": false,
+        "vote_count": 4771,
+        "vote_average": 7.8,
+        "title": "Raiders of the Lost Ark",
+        "release_date": "1981-06-12",
+        "original_language": "en",
+        "original_title": "Raiders of the Lost Ark",
+        "genre_ids": [
+          28,
+          12
+        ],
+        "backdrop_path": "/dU1CArBM4YsKLfG8YvhtuTJJaGR.jpg",
+        "adult": false,
+        "overview": "When Dr. Indiana Jones – the tweed-suited professor who just happens to be a celebrated archaeologist – is hired by the government to locate the legendary Ark of the Covenant, he finds himself up against the entire Nazi regime.",
+        "poster_path": "/44sKJOGP3fTm4QXBcIuqu0RkdP7.jpg"
+      },
+      "id": "tt0082971"
     },
     {
       "title": "Rear Window",
-      "rank": "28",
-      "id": "tt0047396",
-      "rating": 8
+      "rating": 8.2,
+      "tvdb": {
+        "id": 567,
+        "video": false,
+        "vote_count": 1948,
+        "vote_average": 8.2,
+        "title": "Rear Window",
+        "release_date": "1954-08-01",
+        "original_language": "en",
+        "original_title": "Rear Window",
+        "genre_ids": [
+          18,
+          9648,
+          53
+        ],
+        "backdrop_path": "/s9Up9JCwmIY13XoIo3ZJ1mtMLVc.jpg",
+        "adult": false,
+        "overview": "Professional photographer L.B. \"Jeff\" Jeffries breaks his leg while getting an action shot at an auto race. Confined to his New York apartment, he spends his time looking out of the rear window observing the neighbors. He begins to suspect that a man across the courtyard may have murdered his wife. Jeff enlists the help of his high society fashion-consultant girlfriend Lisa Freemont and his visiting nurse Stella to investigate.",
+        "poster_path": "/oXbT7vlLmZ76kWoHe5XJYuyJUgp.jpg"
+      },
+      "id": "tt0047396"
     },
     {
       "title": "It's a Wonderful Life",
-      "rank": "29",
-      "id": "tt0038650",
-      "rating": 8
+      "rating": 8.1,
+      "tvdb": {
+        "id": 1585,
+        "video": false,
+        "vote_count": 1342,
+        "vote_average": 8.1,
+        "title": "It's a Wonderful Life",
+        "release_date": "1946-12-20",
+        "original_language": "en",
+        "original_title": "It's a Wonderful Life",
+        "genre_ids": [
+          18,
+          14,
+          10751
+        ],
+        "backdrop_path": "/6fDqNg8g7NJXUmsF1Dm4Y3iTAZW.jpg",
+        "adult": false,
+        "overview": "A holiday favourite for generations...  George Bailey has spent his entire life giving to the people of Bedford Falls.  All that prevents rich skinflint Mr. Potter from taking over the entire town is George's modest building and loan company.  But on Christmas Eve the business's $8,000 is lost and George's troubles begin.",
+        "poster_path": "/rgj6QjdyCeDrO9KGt1kusGyhvb2.jpg"
+      },
+      "id": "tt0038650"
     },
     {
       "title": "Psycho",
-      "rank": "30",
-      "id": "tt0054215",
-      "rating": 8
+      "rating": 8.3,
+      "tvdb": {
+        "id": 539,
+        "video": false,
+        "vote_count": 3121,
+        "vote_average": 8.3,
+        "title": "Psycho",
+        "release_date": "1960-06-16",
+        "original_language": "en",
+        "original_title": "Psycho",
+        "genre_ids": [
+          18,
+          27,
+          53
+        ],
+        "backdrop_path": "/3md49VBCeqY6MSNyAVY6d5eC6bA.jpg",
+        "adult": false,
+        "overview": "When larcenous real estate clerk Marion Crane goes on the lam with a wad of cash and hopes of starting a new life, she ends up at the notorious Bates Motel, where manager Norman Bates cares for his housebound mother. The place seems quirky, but fine… until Marion decides to take a shower.",
+        "poster_path": "/81d8oyEFgj7FlxJqSDXWr8JH8kV.jpg"
+      },
+      "id": "tt0054215"
     },
     {
-      "title": "Léon: The Professional",
-      "rank": "31",
-      "id": "tt0110413",
-      "rating": 8
+      "title": "Leon: The Professional",
+      "rating": 8.2,
+      "tvdb": {
+        "id": 101,
+        "video": false,
+        "vote_count": 5304,
+        "vote_average": 8.2,
+        "title": "Leon: The Professional",
+        "release_date": "1994-09-14",
+        "original_language": "fr",
+        "original_title": "Léon",
+        "genre_ids": [
+          80,
+          18,
+          53
+        ],
+        "backdrop_path": "/mGN0lH2phYfesyEVqP2xvGUaxAQ.jpg",
+        "adult": false,
+        "overview": "Leon, the top hit man in New York, has earned a rep as an effective \"cleaner\". But when his next-door neighbors are wiped out by a loose-cannon DEA agent, he becomes the unwilling custodian of 12-year-old Mathilda. Before long, Mathilda's thoughts turn to revenge, and she considers following in Leon's footsteps.",
+        "poster_path": "/gE8S02QUOhVnAmYu4tcrBlMTujz.jpg"
+      },
+      "id": "tt0110413"
     },
     {
-      "title": "Sunset Blvd.",
-      "rank": "32",
-      "id": "tt0043014",
-      "rating": 8
+      "title": "Sunset Boulevard",
+      "rating": 8.3,
+      "tvdb": {
+        "id": 599,
+        "video": false,
+        "vote_count": 700,
+        "vote_average": 8.3,
+        "title": "Sunset Boulevard",
+        "release_date": "1950-08-10",
+        "original_language": "en",
+        "original_title": "Sunset Boulevard",
+        "genre_ids": [
+          18
+        ],
+        "backdrop_path": "/u44VbUuoP6OZYEBv2DRd7ShPTMp.jpg",
+        "adult": false,
+        "overview": "A hack screenwriter writes a screenplay for a former silent-film star who has faded into Hollywood obscurity.",
+        "poster_path": "/oFwzvRgfxJc0FUr2mwYTi10dk3G.jpg"
+      },
+      "id": "tt0043014"
     },
     {
       "title": "American History X",
-      "rank": "33",
+      "rating": 8.2,
+      "tvdb": {
+        "adult": false,
+        "backdrop_path": "/i9A0UMFg1hI2kLyCCwnmSbpT2cd.jpg",
+        "genre_ids": [
+          18
+        ],
+        "id": 73,
+        "original_language": "en",
+        "original_title": "American History X",
+        "overview": "Derek Vineyard is paroled after serving 3 years in prison for killing two thugs who tried to break into/steal his truck. Through his brother, Danny Vineyard's narration, we learn that before going to prison, Derek was a skinhead and the leader of a violent white supremacist gang that committed acts of racial crime throughout L.A. and his actions greatly influenced Danny. Reformed and fresh out of prison, Derek severs contact with the gang and becomes determined to keep Danny from going down the same violent path as he did.",
+        "poster_path": "/fXepRAYOx1qC3wju7XdDGx60775.jpg",
+        "release_date": "1998-10-30",
+        "title": "American History X",
+        "video": false,
+        "vote_average": 8.2,
+        "vote_count": 3929
+      },
       "id": "tt0120586"
     },
     {
       "title": "Apocalypse Now",
-      "rank": "34",
+      "rating": 8.1,
+      "tvdb": {
+        "id": 28,
+        "video": false,
+        "vote_count": 2675,
+        "vote_average": 8.1,
+        "title": "Apocalypse Now",
+        "release_date": "1979-08-15",
+        "original_language": "en",
+        "original_title": "Apocalypse Now",
+        "genre_ids": [
+          18,
+          10752
+        ],
+        "backdrop_path": "/k91Dag8AZbhjIJqrtf7F1bQnGPg.jpg",
+        "adult": false,
+        "overview": "At the height of the Vietnam war, Captain Benjamin Willard is sent on a dangerous mission that, officially, \"does not exist, nor will it ever exist.\" His goal is to locate - and eliminate - a mysterious Green Beret Colonel named Walter Kurtz, who has been leading his personal army on illegal guerrilla missions into enemy territory.",
+        "poster_path": "/jcvJ2xcVWU9Wh0hZAxcs103s8nN.jpg"
+      },
       "id": "tt0078788"
     },
     {
-      "title": "Terminator 2: Judgment Day",
-      "rank": "35",
-      "id": "tt0103064"
-    },
-    {
       "title": "Saving Private Ryan",
-      "rank": "36",
+      "rating": 7.9,
+      "tvdb": {
+        "id": 857,
+        "video": false,
+        "vote_count": 6032,
+        "vote_average": 7.9,
+        "title": "Saving Private Ryan",
+        "release_date": "1998-07-24",
+        "original_language": "en",
+        "original_title": "Saving Private Ryan",
+        "genre_ids": [
+          18,
+          36,
+          10752
+        ],
+        "backdrop_path": "/gRtLcCQOpYUI9ThdVzi4VUP8QO3.jpg",
+        "adult": false,
+        "overview": "As U.S. troops storm the beaches of Normandy, three brothers lie dead on the battlefield, with a fourth trapped behind enemy lines. Ranger captain John Miller and seven men are tasked with penetrating German-held territory and bringing the boy home.",
+        "poster_path": "/miDoEMlYDJhOCvxlzI0wZqBs9Yt.jpg"
+      },
       "id": "tt0120815"
     },
     {
       "title": "Memento",
-      "rank": "37",
+      "rating": 8.1,
+      "tvdb": {
+        "adult": false,
+        "backdrop_path": "/oBUznaSdjkY3HtQUzAxgdIZqh4w.jpg",
+        "genre_ids": [
+          9648,
+          53
+        ],
+        "id": 77,
+        "original_language": "en",
+        "original_title": "Memento",
+        "overview": "Suffering short-term memory loss after a head injury, Leonard Shelby embarks on a grim quest to find the lowlife who murdered his wife in this gritty, complex thriller that packs more knots than a hangman's noose. To carry out his plan, Shelby snaps Polaroids of people and places, jotting down contextual notes on the backs of photos to aid in his search and jog his memory. He even tattoos his own body in a desperate bid to remember.",
+        "poster_path": "/fQMSaP88cf1nz4qwuNEEFtazuDM.jpg",
+        "release_date": "2000-10-11",
+        "title": "Memento",
+        "video": false,
+        "vote_average": 8.1,
+        "vote_count": 5375
+      },
       "id": "tt0209144"
     },
     {
       "title": "City Lights",
-      "rank": "38",
+      "rating": 8.2,
+      "tvdb": {
+        "adult": false,
+        "backdrop_path": "/vT6ux2rdyg2kexuLisO5Ygz7pHg.jpg",
+        "genre_ids": [
+          35,
+          18,
+          10749
+        ],
+        "id": 901,
+        "original_language": "en",
+        "original_title": "City Lights",
+        "overview": "City Lights is the first silent film that Charlie Chaplin directed after he established himself with sound accompanied films. The film is about a penniless man who falls in love with a flower girl. The film was a great success and today is deemed a cult classic.",
+        "poster_path": "/bXNvzjULc9jrOVhGfjcc64uKZmZ.jpg",
+        "release_date": "1931-01-30",
+        "title": "City Lights",
+        "video": false,
+        "vote_average": 8.2,
+        "vote_count": 561
+      },
       "id": "tt0021749"
     },
     {
       "title": "Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb",
-      "rank": "39",
+      "rating": 8,
+      "tvdb": {
+        "adult": false,
+        "backdrop_path": "/8Sh5rRcOrBy4AIm3keZ50dOIn4D.jpg",
+        "genre_ids": [
+          35,
+          18,
+          10752
+        ],
+        "id": 935,
+        "original_language": "en",
+        "original_title": "Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb",
+        "overview": "After the insane General Jack D. Ripper initiates a nuclear strike on the Soviet Union, a war room full of politicians, generals and a Russian diplomat all frantically try to stop the nuclear strike...",
+        "poster_path": "/tviJ68Wj4glQk3CPMvdvExYHxX.jpg",
+        "release_date": "1964-01-29",
+        "title": "Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb",
+        "video": false,
+        "vote_average": 8,
+        "vote_count": 1854
+      },
       "id": "tt0057012"
     },
     {
       "title": "Alien",
-      "rank": "40",
+      "rating": 7.9,
+      "tvdb": {
+        "id": 348,
+        "video": false,
+        "vote_count": 5507,
+        "vote_average": 7.9,
+        "title": "Alien",
+        "release_date": "1979-05-25",
+        "original_language": "en",
+        "original_title": "Alien",
+        "genre_ids": [
+          27,
+          878
+        ],
+        "backdrop_path": "/mDhq855QfsWyKX6pp01afZlQ2Jt.jpg",
+        "adult": false,
+        "overview": "During its return to the earth, commercial spaceship Nostromo intercepts a distress signal from a distant planet. When a three-member team of the crew discovers a chamber containing thousands of eggs on the planet, a creature inside one of the eggs attacks an explorer. The entire crew is unaware of the impending nightmare set to descend upon them when the alien parasite planted inside its unfortunate host is birthed.",
+        "poster_path": "/2h00HrZs89SL3tXB4nbkiM7BKHs.jpg"
+      },
       "id": "tt0078748"
     },
     {
       "title": "Modern Times",
-      "rank": "41",
+      "rating": 8.2,
+      "tvdb": {
+        "id": 3082,
+        "video": false,
+        "vote_count": 1110,
+        "vote_average": 8.2,
+        "title": "Modern Times",
+        "release_date": "1936-02-05",
+        "original_language": "en",
+        "original_title": "Modern Times",
+        "genre_ids": [
+          35,
+          18
+        ],
+        "backdrop_path": "/s58uDwuyVMqgsbmnfyrbpfF147.jpg",
+        "adult": false,
+        "overview": "The Tramp struggles to live in modern industrial society with the help of a young homeless woman.",
+        "poster_path": "/7uoiKOEjxBBW0AgDGQWrlfGQ90w.jpg"
+      },
       "id": "tt0027977"
     },
     {
       "title": "Spirited Away",
-      "rank": "42",
+      "rating": 8.4,
+      "tvdb": {
+        "id": 129,
+        "video": false,
+        "vote_count": 4867,
+        "vote_average": 8.4,
+        "title": "Spirited Away",
+        "release_date": "2001-07-20",
+        "original_language": "ja",
+        "original_title": "千と千尋の神隠し",
+        "genre_ids": [
+          16,
+          14,
+          10751
+        ],
+        "backdrop_path": "/djgM2d3e42p9GFQObg6lwK2SVw2.jpg",
+        "adult": false,
+        "overview": "A young girl, Chihiro, becomes trapped in a strange new world of spirits. When her parents undergo a mysterious transformation, she must call upon the courage she never knew she had to free her family.",
+        "poster_path": "/dL11DBPcRhWWnJcFXl9A07MrqTI.jpg"
+      },
       "id": "tt0245429"
     },
     {
       "title": "North by Northwest",
-      "rank": "43",
+      "rating": 7.9,
+      "tvdb": {
+        "id": 213,
+        "video": false,
+        "vote_count": 1294,
+        "vote_average": 7.9,
+        "title": "North by Northwest",
+        "release_date": "1959-07-07",
+        "original_language": "en",
+        "original_title": "North by Northwest",
+        "genre_ids": [
+          9648,
+          53
+        ],
+        "backdrop_path": "/AplR1QRswlXiM65GoifX8sDadME.jpg",
+        "adult": false,
+        "overview": "Advertising man Roger Thornhill is mistaken for a spy, triggering a deadly cross-country chase.",
+        "poster_path": "/aNV789h3oHm2pTHK5Bdq5RuiumZ.jpg"
+      },
       "id": "tt0053125"
     },
     {
       "title": "Back to the Future",
-      "rank": "44",
+      "rating": 8.1,
+      "tvdb": {
+        "adult": false,
+        "backdrop_path": "/x4N74cycZvKu5k3KDERJay4ajR3.jpg",
+        "genre_ids": [
+          12,
+          35,
+          878,
+          10751
+        ],
+        "id": 105,
+        "original_language": "en",
+        "original_title": "Back to the Future",
+        "overview": "Eighties teenager Marty McFly is accidentally sent back in time to 1955, inadvertently disrupting his parents' first meeting and attracting his mother's romantic interest. Marty must repair the damage to history by rekindling his parents' romance and - with the help of his eccentric inventor friend Doc Brown - return to 1985.",
+        "poster_path": "/pTpxQB1N0waaSc3OSn0e9oc8kx9.jpg",
+        "release_date": "1985-07-03",
+        "title": "Back to the Future",
+        "video": false,
+        "vote_average": 8.1,
+        "vote_count": 7660
+      },
       "id": "tt0088763"
     },
     {
       "title": "Life Is Beautiful",
-      "rank": "45",
+      "rating": 8.3,
+      "tvdb": {
+        "adult": false,
+        "backdrop_path": "/bORe0eI72D874TMawOOFvqWS6Xe.jpg",
+        "genre_ids": [
+          35,
+          18
+        ],
+        "id": 637,
+        "original_language": "it",
+        "original_title": "La vita è bella",
+        "overview": "A touching story of an Italian book seller of Jewish ancestry who lives in his own little fairy tale. His creative and happy life would come to an abrupt halt when his entire family is deported to a concentration camp during World War II. While locked up he tries to convince his son that the whole thing is just a game.",
+        "poster_path": "/f7DImXDebOs148U4uPjI61iDvaK.jpg",
+        "release_date": "1997-12-20",
+        "title": "Life Is Beautiful",
+        "video": false,
+        "vote_average": 8.3,
+        "vote_count": 4811
+      },
       "id": "tt0118799"
     },
     {
       "title": "The Shining",
-      "rank": "46",
+      "rating": 8.1,
+      "tvdb": {
+        "id": 694,
+        "video": false,
+        "vote_count": 5289,
+        "vote_average": 8.1,
+        "title": "The Shining",
+        "release_date": "1980-05-22",
+        "original_language": "en",
+        "original_title": "The Shining",
+        "genre_ids": [
+          27,
+          53
+        ],
+        "backdrop_path": "/h4DcDCOkQBENWBJZjNlPv3adQfM.jpg",
+        "adult": false,
+        "overview": "Jack Torrance accepts a caretaker job at the Overlook Hotel, where he, along with his wife Wendy and their son Danny, must live isolated from the rest of the world for the winter. But they aren't prepared for the madness that lurks within.",
+        "poster_path": "/9fgh3Ns1iRzlQNYuJyK0ARQZU7w.jpg"
+      },
       "id": "tt0081505"
     },
     {
       "title": "The Pianist",
-      "rank": "47",
+      "rating": 8.1,
+      "tvdb": {
+        "id": 423,
+        "video": false,
+        "vote_count": 2486,
+        "vote_average": 8.1,
+        "title": "The Pianist",
+        "release_date": "2002-09-24",
+        "original_language": "en",
+        "original_title": "The Pianist",
+        "genre_ids": [
+          18,
+          10752
+        ],
+        "backdrop_path": "/xUR95VFV1UTyzS1C8Lj06hi2n2M.jpg",
+        "adult": false,
+        "overview": "The true story of pianist Wladyslaw Szpilman's experiences in Warsaw during the Nazi occupation. When the Jews of the city find themselves forced into a ghetto, Szpilman finds work playing in a café; and when his family is deported in 1942, he stays behind, works for a while as a laborer, and eventually goes into hiding in the ruins of the war-torn city.",
+        "poster_path": "/iunmxWkOi7Vk17Ob3G2HwwjgHsr.jpg"
+      },
       "id": "tt0253474"
     },
     {
@@ -286,17 +845,74 @@
     },
     {
       "title": "Vertigo",
-      "rank": "52",
+      "rating": 8.1,
+      "tvdb": {
+        "adult": false,
+        "backdrop_path": "/sNlCvWbAEYZZGlPIOdiQc4y1X7d.jpg",
+        "genre_ids": [
+          9648,
+          53,
+          10749
+        ],
+        "id": 426,
+        "original_language": "en",
+        "original_title": "Vertigo",
+        "overview": "A retired San Francisco detective suffering from acrophobia investigates the strange activities of an old friend's wife, all the while becoming dangerously obsessed with her.",
+        "poster_path": "/obhM86qyv8RsE69XSMTtT9FdE0b.jpg",
+        "release_date": "1958-05-09",
+        "title": "Vertigo",
+        "video": false,
+        "vote_average": 8.1,
+        "vote_count": 1570
+      },
       "id": "tt0052357"
     },
     {
       "title": "Django Unchained",
-      "rank": "53",
+      "rating": 7.9,
+      "tvdb": {
+        "id": 68718,
+        "video": false,
+        "vote_count": 11962,
+        "vote_average": 7.9,
+        "title": "Django Unchained",
+        "release_date": "2012-12-25",
+        "original_language": "en",
+        "original_title": "Django Unchained",
+        "genre_ids": [
+          18,
+          37
+        ],
+        "backdrop_path": "/qUcmEqnzIwlwZxSyTf3WliSfAjJ.jpg",
+        "adult": false,
+        "overview": "With the help of a German bounty hunter, a freed slave sets out to rescue his wife from a brutal Mississippi plantation owner.",
+        "poster_path": "/5WJnxuw41sddupf8cwOxYftuvJG.jpg"
+      },
       "id": "tt1853728"
     },
     {
       "title": "Double Indemnity",
-      "rank": "54",
+      "rating": 8,
+      "tvdb": {
+        "adult": false,
+        "backdrop_path": "/1l77Gk2OK9hjRFze08El8Do3pT1.jpg",
+        "genre_ids": [
+          80,
+          18,
+          9648,
+          53
+        ],
+        "id": 996,
+        "original_language": "en",
+        "original_title": "Double Indemnity",
+        "overview": "A rich woman [Barbara Stanwyck] and a calculating insurance agent [Fred MacMurray] plot to kill her unsuspecting husband after he signs a double indemnity policy.  Against a backdrop of distinctly Californian settings, the partners in crime plan the perfect murder to collect the insurance, which pays  double if the death is accidental.  Directed by Billy Wilder from a screenplay he wrote with Raymond Chandler, and from the novel by James M. Cain.",
+        "poster_path": "/nW0cCpfuGcR1JG7EinDbdL2Ijf2.jpg",
+        "release_date": "1944-04-24",
+        "title": "Double Indemnity",
+        "video": false,
+        "vote_average": 8,
+        "vote_count": 514
+      },
       "id": "tt0036775"
     },
     {
@@ -306,17 +922,72 @@
     },
     {
       "title": "Aliens",
-      "rank": "56",
+      "rating": 7.8,
+      "tvdb": {
+        "id": 679,
+        "video": false,
+        "vote_count": 3844,
+        "vote_average": 7.8,
+        "title": "Aliens",
+        "release_date": "1986-07-18",
+        "original_language": "en",
+        "original_title": "Aliens",
+        "genre_ids": [
+          28,
+          27,
+          878,
+          53
+        ],
+        "backdrop_path": "/r2zB2vGLDQVxlRZISH7KzQ6reiC.jpg",
+        "adult": false,
+        "overview": "When Ripley's lifepod is found by a salvage crew over 50 years later, she finds that terra-formers are on the very planet they found the alien species. When the company sends a family of colonists out to investigate her story, all contact is lost with the planet and colonists. They enlist Ripley and the colonial marines to return and search for answers.",
+        "poster_path": "/nORMXEkYEbzkU5WkMWMgRDJwjSZ.jpg"
+      },
       "id": "tt0090605"
     },
     {
       "title": "Taxi Driver",
-      "rank": "57",
+      "rating": 8.1,
+      "tvdb": {
+        "adult": false,
+        "backdrop_path": "/hjmJKAVoZ3n2KWbKgasbfdugwhu.jpg",
+        "genre_ids": [
+          80,
+          18
+        ],
+        "id": 103,
+        "original_language": "en",
+        "original_title": "Taxi Driver",
+        "overview": "A mentally unstable Vietnam War veteran works as a night-time taxi driver in New York City where the perceived decadence and sleaze feeds his urge for violent action, attempting to save a preadolescent prostitute in the process.",
+        "poster_path": "/ekstpH614fwDX8DUln1a2Opz0N8.jpg",
+        "release_date": "1976-02-07",
+        "title": "Taxi Driver",
+        "video": false,
+        "vote_average": 8.1,
+        "vote_count": 3426
+      },
       "id": "tt0075314"
     },
     {
       "title": "American Beauty",
-      "rank": "58",
+      "rating": 7.9,
+      "tvdb": {
+        "adult": false,
+        "backdrop_path": "/z5J18ByLeOZ68iORfMXmxeFuwyL.jpg",
+        "genre_ids": [
+          18
+        ],
+        "id": 14,
+        "original_language": "en",
+        "original_title": "American Beauty",
+        "overview": "Lester Burnham, a depressed suburban father in a mid-life crisis, decides to turn his hectic life around after developing an infatuation with his daughter's attractive friend.",
+        "poster_path": "/or1MP8BZIAjqWYxPdPX724ydKar.jpg",
+        "release_date": "1999-09-15",
+        "title": "American Beauty",
+        "video": false,
+        "vote_average": 7.9,
+        "vote_count": 4395
+      },
       "id": "tt0169547"
     },
     {
@@ -326,7 +997,26 @@
     },
     {
       "title": "Gladiator",
-      "rank": "60",
+      "rating": 8,
+      "tvdb": {
+        "id": 98,
+        "video": false,
+        "vote_count": 6838,
+        "vote_average": 8,
+        "title": "Gladiator",
+        "release_date": "2000-05-01",
+        "original_language": "en",
+        "original_title": "Gladiator",
+        "genre_ids": [
+          28,
+          12,
+          18
+        ],
+        "backdrop_path": "/5vZw7ltCKI0JiOYTtRxaIC3DX0e.jpg",
+        "adult": false,
+        "overview": "In the year 180, the death of emperor Marcus Aurelius throws the Roman Empire into chaos.  Maximus is one of the Roman army's most capable and trusted generals and a key advisor to the emperor.  As Marcus' devious son Commodus ascends to the throne, Maximus is set to be executed.  He escapes, but is captured by slave traders.  Renamed Spaniard and forced to become a gladiator, Maximus must battle to the death with other men for the amusement of paying audiences.",
+        "poster_path": "/6WBIzCgmDCYrqh64yDREGeDk9d3.jpg"
+      },
       "id": "tt0172495"
     },
     {
@@ -346,7 +1036,26 @@
     },
     {
       "title": "Toy Story 3",
-      "rank": "64",
+      "rating": 7.6,
+      "tvdb": {
+        "id": 10193,
+        "video": false,
+        "vote_count": 5758,
+        "vote_average": 7.6,
+        "title": "Toy Story 3",
+        "release_date": "2010-06-16",
+        "original_language": "en",
+        "original_title": "Toy Story 3",
+        "genre_ids": [
+          16,
+          35,
+          10751
+        ],
+        "backdrop_path": "/y2qAjM37QgatWeG84DDtwsZuMW.jpg",
+        "adult": false,
+        "overview": "Woody, Buzz, and the rest of Andy's toys haven't been played with in years. With Andy about to go to college, the gang find themselves accidentally left at a nefarious day care center. The toys must band together to escape and return home to Andy.",
+        "poster_path": "/AqYmOBxLjASrj5UtybIh7Axyv77.jpg"
+      },
       "id": "tt0435761"
     },
     {
@@ -361,22 +1070,96 @@
     },
     {
       "title": "A Clockwork Orange",
-      "rank": "67",
+      "rating": 8.1,
+      "tvdb": {
+        "id": 185,
+        "video": false,
+        "vote_count": 4382,
+        "vote_average": 8.1,
+        "title": "A Clockwork Orange",
+        "release_date": "1971-12-18",
+        "original_language": "en",
+        "original_title": "A Clockwork Orange",
+        "genre_ids": [
+          18,
+          878
+        ],
+        "backdrop_path": "/unMc1jEyqCnzba976GviSFKGagt.jpg",
+        "adult": false,
+        "overview": "Demonic gang-leader Alex goes on the spree of rape, mugging and murder with his pack of \"droogs\". But he's a boy who also likes Beethoven's Ninth and a bit of \"the old in-out, in-out\". He later finds himself at the mercy of the state and its brainwashing experiment designed to take violence off the streets.",
+        "poster_path": "/kgAi87gyx6b4oGJYSC36tVkJyJu.jpg"
+      },
       "id": "tt0066921"
     },
     {
       "title": "Lawrence of Arabia",
-      "rank": "68",
+      "rating": 7.9,
+      "tvdb": {
+        "id": 947,
+        "video": false,
+        "vote_count": 1063,
+        "vote_average": 7.9,
+        "title": "Lawrence of Arabia",
+        "release_date": "1962-12-10",
+        "original_language": "en",
+        "original_title": "Lawrence of Arabia",
+        "genre_ids": [
+          12,
+          18,
+          36,
+          10752
+        ],
+        "backdrop_path": "/lENerYvUcfl9GlolqA1emj5gb4k.jpg",
+        "adult": false,
+        "overview": "An epic about British officer T.E. Lawrence's mission to aid the Arab tribes in their revolt against the Ottoman Empire during the First World War. Lawrence becomes a flamboyant, messianic figure in the cause of Arab unity but his psychological instability threatens to undermine his achievements.",
+        "poster_path": "/j21UXCOq0EbV8EPTtmPn1CGePfB.jpg"
+      },
       "id": "tt0056172"
     },
     {
       "title": "Amélie",
-      "rank": "69",
+      "rating": 7.9,
+      "tvdb": {
+        "id": 194,
+        "video": false,
+        "vote_count": 4190,
+        "vote_average": 7.9,
+        "title": "Amélie",
+        "release_date": "2001-04-25",
+        "original_language": "fr",
+        "original_title": "Le Fabuleux Destin d'Amélie Poulain",
+        "genre_ids": [
+          35,
+          10749
+        ],
+        "backdrop_path": "/nxhfenC1jb5EcTI5GYxqnjYZMId.jpg",
+        "adult": false,
+        "overview": "At a tiny Parisian café, the adorable yet painfully shy Amélie (Audrey Tautou) accidentally discovers a gift for helping others. Soon Amelie is spending her days as a matchmaker, guardian angel, and all-around do-gooder. But when she bumps into a handsome stranger, will she find the courage to become the star of her very own love story?",
+        "poster_path": "/f0uorE7K7ggHfr8r7pUTOHWkOlE.jpg"
+      },
       "id": "tt0211915"
     },
     {
       "title": "To Kill a Mockingbird",
-      "rank": "70",
+      "rating": 8,
+      "tvdb": {
+        "id": 595,
+        "video": false,
+        "vote_count": 887,
+        "vote_average": 8,
+        "title": "To Kill a Mockingbird",
+        "release_date": "1962-12-25",
+        "original_language": "en",
+        "original_title": "To Kill a Mockingbird",
+        "genre_ids": [
+          80,
+          18
+        ],
+        "backdrop_path": "/eb8EqwtFWVoujlbU8CmaEYc1qE5.jpg",
+        "adult": false,
+        "overview": "Scout Finch, 6, and her older brother Jem live in sleepy Maycomb, Alabama, spending much of their time with their friend Dill and spying on their reclusive and mysterious neighbor, Boo Radley. When Atticus, their widowed father and a respected lawyer, defends a black man named Tom Robinson against fabricated rape charges, the trial and tangent events expose the children to evils of racism and stereotyping.",
+        "poster_path": "/2lgU2AmCcLDTIyXIjjFgAxjdtBH.jpg"
+      },
       "id": "tt0056592"
     },
     {
@@ -391,17 +1174,73 @@
     },
     {
       "title": "The Lion King",
-      "rank": "73",
+      "rating": 8.1,
+      "tvdb": {
+        "id": 8587,
+        "video": false,
+        "vote_count": 7007,
+        "vote_average": 8.1,
+        "title": "The Lion King",
+        "release_date": "1994-06-23",
+        "original_language": "en",
+        "original_title": "The Lion King",
+        "genre_ids": [
+          16,
+          18,
+          10751
+        ],
+        "backdrop_path": "/klI0K4oQMsLhHdjA9Uw8WLugk9v.jpg",
+        "adult": false,
+        "overview": "A young lion cub named Simba can't wait to be king. But his uncle craves the title for himself and will stop at nothing to get it.",
+        "poster_path": "/bKPtXn9n4M4s8vvZrbw40mYsefB.jpg"
+      },
       "id": "tt0110357"
     },
     {
       "title": "Cinema Paradiso",
-      "rank": "74",
+      "rating": 8.3,
+      "tvdb": {
+        "id": 11216,
+        "video": false,
+        "vote_count": 1107,
+        "vote_average": 8.3,
+        "title": "Cinema Paradiso",
+        "release_date": "1988-11-17",
+        "original_language": "it",
+        "original_title": "Nuovo Cinema Paradiso",
+        "genre_ids": [
+          18,
+          10749
+        ],
+        "backdrop_path": "/tVi83ttAeyMJinYpy6xfgJSpzvP.jpg",
+        "adult": false,
+        "overview": "A filmmaker recalls his childhood, when he fell in love with the movies at his village's theater and formed a deep friendship with the theater's projectionist.",
+        "poster_path": "/pVJAStFPfdLD25DEhv410PZumOM.jpg"
+      },
       "id": "tt0095765"
     },
     {
-      "title": "Star Wars: Episode VI - Return of the Jedi",
-      "rank": "75",
+      "title": "Return of the Jedi",
+      "rating": 7.9,
+      "tvdb": {
+        "id": 1892,
+        "video": false,
+        "vote_count": 5941,
+        "vote_average": 7.9,
+        "title": "Return of the Jedi",
+        "release_date": "1983-05-23",
+        "original_language": "en",
+        "original_title": "Return of the Jedi",
+        "genre_ids": [
+          28,
+          12,
+          878
+        ],
+        "backdrop_path": "/koE7aMeR2ATivI18mCbscLsI0Nm.jpg",
+        "adult": false,
+        "overview": "As Rebel leaders map their strategy for an all-out attack on the Emperor's newer, bigger Death Star. Han Solo remains frozen in the cavernous desert fortress of Jabba the Hutt, the most loathsome outlaw in the universe, who is also keeping Princess Leia as a slave girl. Now a master of the Force, Luke Skywalker rescues his friends, but he cannot become a true Jedi Knight until he wages his own crucial battle against Darth Vader, who has sworn to win Luke over to the dark side of the Force.",
+        "poster_path": "/jx5p0aHlbPXqe3AH9G15NvmWaqQ.jpg"
+      },
       "id": "tt0086190"
     },
     {
@@ -486,17 +1325,73 @@
     },
     {
       "title": "Some Like It Hot",
-      "rank": "92",
+      "rating": 8.1,
+      "tvdb": {
+        "id": 239,
+        "video": false,
+        "vote_count": 1058,
+        "vote_average": 8.1,
+        "title": "Some Like It Hot",
+        "release_date": "1959-03-18",
+        "original_language": "en",
+        "original_title": "Some Like It Hot",
+        "genre_ids": [
+          35,
+          10749
+        ],
+        "backdrop_path": "/sdibVacEUaYcM41zmepM0J2xNqq.jpg",
+        "adult": false,
+        "overview": "Two musicians witness a mob hit and struggle to find a way out of the city before they are found by the gangsters. Their only opportunity is to join an all-girl band as they leave on a tour. To make their getaway they must first disguise themselves as women, then keep their identities secret and deal with the problems this brings - such as an attractive bandmate and a very determined suitor.",
+        "poster_path": "/pxc9EFCMYkItESpqqrI783yl8Gh.jpg"
+      },
       "id": "tt0053291"
     },
     {
       "title": "Amadeus",
-      "rank": "93",
+      "rating": 7.9,
+      "tvdb": {
+        "adult": false,
+        "backdrop_path": "/6GMcKubg3KmrE8snLOCNAtsZWW2.jpg",
+        "genre_ids": [
+          18,
+          36,
+          10402
+        ],
+        "id": 279,
+        "original_language": "en",
+        "original_title": "Amadeus",
+        "overview": "The incredible story of genius musician Wolfgang Amadeus Mozart, told in flashback by his peer and secret rival Antonio Salieri – now confined to an insane asylum.",
+        "poster_path": "/flnoqdC38mbaulAeptjynOFO7yi.jpg",
+        "release_date": "1984-10-26",
+        "title": "Amadeus",
+        "video": false,
+        "vote_average": 7.9,
+        "vote_count": 1408
+      },
       "id": "tt0086879"
     },
     {
       "title": "2001: A Space Odyssey",
-      "rank": "94",
+      "rating": 7.9,
+      "tvdb": {
+        "id": 62,
+        "video": false,
+        "vote_count": 3835,
+        "vote_average": 7.9,
+        "title": "2001: A Space Odyssey",
+        "release_date": "1968-04-09",
+        "original_language": "en",
+        "original_title": "2001: A Space Odyssey",
+        "genre_ids": [
+          12,
+          9648,
+          878
+        ],
+        "backdrop_path": "/pckdZ29bHj11hBsV3SbVVfmCB6C.jpg",
+        "adult": false,
+        "overview": "Humanity finds a mysterious object buried beneath the lunar surface and sets off to find its origins with the help of HAL 9000, the world's most advanced super computer.",
+        "poster_path": "/90T7b2LIrL07ndYQBmSm09yqVEH.jpg"
+      },
       "id": "tt0062622"
     },
     {
@@ -511,7 +1406,26 @@
     },
     {
       "title": "The Sting",
-      "rank": "97",
+      "rating": 7.9,
+      "tvdb": {
+        "adult": false,
+        "backdrop_path": "/qdTTCAt35taHlFeeKZwBXLuJ5z7.jpg",
+        "genre_ids": [
+          35,
+          80,
+          18
+        ],
+        "id": 9277,
+        "original_language": "en",
+        "original_title": "The Sting",
+        "overview": "Set in the 1930's this intricate caper deals with an ambitious small-time crook and a veteran con man who seek revenge on a vicious crime lord who murdered one of their gang.",
+        "poster_path": "/mQaM8fDQdFWwCTFp0TZG8fChlZ5.jpg",
+        "release_date": "1973-12-25",
+        "title": "The Sting",
+        "video": false,
+        "vote_average": 7.9,
+        "vote_count": 800
+      },
       "id": "tt0070735"
     },
     {
@@ -520,14 +1434,11 @@
       "id": "tt0053604"
     },
     {
-      "title": "Grave of the Fireflies",
-      "rank": "99",
-      "id": "tt0095327"
-    },
-    {
-      "title": "Indiana Jones and the Last Crusade",
-      "rank": "100",
-      "id": "tt0097576"
+      "title": "Test Movie",
+      "rank": "30",
+      "imdb-id": "tt0054215",
+      "rating": 8,
+      "id": "HyGaSe_5f"
     }
   ]
 }

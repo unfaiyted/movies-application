@@ -9,10 +9,10 @@ html, body {
 
 .loading-container {
     position: absolute;
-    top: 50%;
-    transform: translateY(-100%);
     text-align: center;
-    z-index: 1000000 !important;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
 }
 
 .page-container {
@@ -26,7 +26,7 @@ html, body {
     width: 100%;
     padding-top: 120px;
     height: 100%;
-    opacity: 0.1;
+    opacity: 0.15;
     float: left;
     position: fixed;
     background-size: cover;
@@ -86,9 +86,15 @@ html, body {
     -moz-box-shadow: -1px 0px 8px rgba(0, 0, 0, 0.80);
     -webkit-box-shadow: -1px 0px 8px rgba(0, 0, 0, 0.80);
 }
-.movie-img img:hover {
-    border: 2px solid #BA8043;
-    opacity: 0.5;
+.standard-hover {
+    border: 2px solid #ba6144;
+    opacity: 0.3;
+}
+
+.loading-hover {
+    border: 2px solid #ba6b5e;
+    opacity: 0.3;
+
 }
 
 .hide {
@@ -100,7 +106,9 @@ html, body {
 }
 
 #moviesList {
-    padding-left: 25%;
+    margin-left: 25%;
+    float: left;
+    z-index: -1;
 }
 
 .movie-title {
@@ -117,6 +125,7 @@ html, body {
 
 .movie-database button {
     color: #fff;
+    opacity: 0;
 }
 
 .movie-database button.update {
@@ -149,3 +158,19 @@ html, body {
     font-size: 10px;
 
 }
+
+#movie-full {
+
+    width: 100%;
+    height: 100%;
+    text-shadow: 1px 1px 25px rgba(0, 0, 0, 1);
+    color: #fff;
+    text-align: center;
+    padding-top: 100px;
+    background-color: rgba(0, 0, 0, 0.90);
+    float: left;
+    position: fixed;
+    z-index: 100000 !important;
+
+}
+
