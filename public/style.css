@@ -44,6 +44,8 @@ html, body {
     padding-top: 55px;
     background-color: rgba(0,0,0,0.5);
     height: 100%;
+    float: left;
+    position: fixed;
 }
 
 .movie img {
@@ -60,8 +62,51 @@ html, body {
     opacity: 0.9;
 }
 
+#moviesList {
+    padding-left: 25%;
+}
+
 .movie-title {
     color: #fff;
     font-size: 12px;
     padding-top: 8px;
+}
+
+.movie-database {
+    position: relative;
+    color: #fff;
+}
+
+
+.movie-database button {
+    color: #fff;
+}
+
+.movie-database button.update {
+    position: absolute;
+    top:-60px;
+    color: #fff;
+    left: 120px;
+    border: transparent;
+    background-color: transparent;
+
+}
+
+
+.movie-database button.edit {
+    position: absolute;
+    top:-60px;
+    right: 120px;
+    border: transparent;
+    background-color: transparent;
+
+}
+
+.movie-database button.delete {
+    position: absolute;
+    top:-250px;
+    left: 125px;
+    border: transparent;
+    background-color: transparent;
+
 }
