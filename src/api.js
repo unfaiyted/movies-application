@@ -6,7 +6,7 @@ module.exports = {
       .then(response => response.json());
     },
     // Add new movie to website
-    addMovie: () => {
+    addMovie: (movieObject) => {
 
     },
     //Change value of data in movies

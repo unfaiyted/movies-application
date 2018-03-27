@@ -22,8 +22,36 @@ html, body {
     height: 100%;
 }
 
+.bg-container {
+    width: 100%;
+    padding-top: 120px;
+    height: 100%;
+    opacity: 0.1;
+    float: left;
+    position: fixed;
+    background-size: cover;
+}
+
+.loading-data {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: -165px;
+    left: 45px;
+    background-color: transparent;
+}
+
+
+.loading-data img {
+    background-color: transparent;
+    margin: 0px;
+    border: 0;
+    padding: 0;
+}
+
 .movie {
     width: 165px;
+    height: 250px;
     /* border: 2px solid #000; */
 
 }
@@ -41,14 +69,15 @@ html, body {
 
 
 .menu-left {
-    padding-top: 55px;
+    padding: 20px;
     background-color: rgba(0,0,0,0.5);
     height: 100%;
     float: left;
     position: fixed;
+    color: #fff;
 }
 
-.movie img {
+.movie-img img {
 
     background: #ccc;
     border: 2px solid #ccc;
@@ -57,9 +86,17 @@ html, body {
     -moz-box-shadow: -1px 0px 8px rgba(0, 0, 0, 0.80);
     -webkit-box-shadow: -1px 0px 8px rgba(0, 0, 0, 0.80);
 }
-.movie img:hover {
+.movie-img img:hover {
     border: 2px solid #BA8043;
-    opacity: 0.9;
+    opacity: 0.5;
+}
+
+.hide {
+    display: none;
+}
+
+.movie-img {
+    background-color: grey;
 }
 
 #moviesList {
@@ -86,27 +123,29 @@ html, body {
     position: absolute;
     top:-60px;
     color: #fff;
-    left: 120px;
+    left: 115px;
     border: transparent;
     background-color: transparent;
+    font-size: 10px;
 
 }
-
 
 .movie-database button.edit {
     position: absolute;
     top:-60px;
-    right: 120px;
+    right: 110px;
     border: transparent;
     background-color: transparent;
+    font-size: 10px;
 
 }
 
 .movie-database button.delete {
     position: absolute;
-    top:-250px;
-    left: 125px;
+    top:-245px;
+    left: 115px;
     border: transparent;
     background-color: transparent;
+    font-size: 10px;
 
 }

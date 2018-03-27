@@ -29,27 +29,33 @@
             <!--<i class="material-icons">play_circle_filled</i>-->
         </div>
         <div class="form-inline">
-            Title <i class="material-icons">title</i> | Genre   | Rating <i class="material-icons">reorder</i>
             <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-            [Add]<i class="material-icons">note_add</i>
+            <i class="material-icons" aria-label="Add">note_add</i>
         </div>
     </nav>
 
 </div>
 
 
+<div class="bg-container">
+</div>
 <div class="page-container">
 
 
         <div class="col-3 menu-left">
 
 
-            <ul>
-                <li>Item list 1</li>
-                <li>Item List 2</li>
-                <li>Item List 3</li>
-            </ul>
+            <h4>Movies:</h4>
 
+
+            <h5 class="">Sort by</h5>
+            <ul>
+                <li>Title</li>
+                <li>Genre</li>
+                <li>Ranking</li>
+                <li>Recently Added</li>
+                <li>Category</li>
+            </ul>
 
         </div>
 
@@ -65,16 +71,27 @@
 
         </div>
 
+
+
+
+    <div class="add">
+        <form method="post" id="addMovie">
+            <input type="hidden" name="movie-name" value="Test Movie">
+            <button type="submit">Add Movie</button>
+        </form>
+
+    </div>
+
 </div>
+
+
+
 
 
 
 <footer>
 
 </footer>
-
-
-
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
