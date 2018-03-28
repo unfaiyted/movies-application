@@ -55,7 +55,7 @@
     <nav class="navbar navbar-dark justify-content-between navbar-fixed-top fixed-top first-header">
         <a class="navbar-brand"><i class="material-icons">play_circle_outline</i> miniMoviesDB </a>
         <div class="form-inline">  &nbsp;
-            <span id="clock">5:50PM</span> <i class="material-icons">alarm</i>
+            <span id="clock">5:50PM </span> &nbsp; <i class="material-icons">alarm</i>
         </div>
     </nav>
 </header>
@@ -75,7 +75,7 @@
                     <input type="hidden" name="id" value="tt0167260">
                     <!--<button type="submit" id="submit-new-movie">Add Movie</button>-->
                     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#add-movie-menu">
-                        <i class="material-icons" aria-label="Add">note_add</i> Add movie
+                        <span class="add-text">  <i class="material-icons" aria-label="Add">note_add</i> Add movie</span>
                     </button>
 
                 </form>
@@ -92,14 +92,26 @@
         <div class="col-3 menu-left">
             <h4>Movies:</h4>
 
+
+            <h5 class="nav-link">Sort by</h5>
             <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                <a class="nav-link active sort-menu" id="v-pills-home-tab" data-toggle="pill" role="tab" aria-controls="v-pills-home" aria-selected="true" name="sort-by">Sort By</a>
-                <a class="nav-link sort-menu" id="v-pills-profile-tab" data-toggle="pill" role="tab" aria-controls="v-pills-profile" aria-selected="false" name="title">Title</a>
-                <a class="nav-link sort-menu" id="v-pills-messages-tab" data-toggle="pill" role="tab" aria-controls="v-pills-messages" aria-selected="false" name="ranking">Ranking</a>
-                <a class="nav-link sort-menu" id="v-pills-recent-tab" data-toggle="pill" role="tab" aria-controls="v-pills-settings" aria-selected="false" name="date_added">Recently Added</a>
-                <a class="nav-link sort-menu" id="v-pills-genre-tab" data-toggle="pill" role="tab" aria-controls="v-pills-settings" aria-selected="false" name="genre">Genre</a>
-                <a class="nav-link sort-menu" id="v-pills-fav-tab" data-toggle="pill" role="tab" aria-controls="v-pills-settings" aria-selected="false" name="favorites">Favorites</a>
+                <a class="nav-link sort-menu" id="v-pills-profile-tab" data-toggle="pill" role="tab" aria-controls="v-pills-profile" aria-selected="true" name="title">
+                    Title <i class="material-icons arrow-right"></i></a>
+                <a class="nav-link sort-menu" id="v-pills-messages-tab" data-toggle="pill" role="tab" aria-controls="v-pills-messages" aria-selected="false" name="rating">
+                    Ranking  <i class="material-icons arrow-right"></i></a>
+                <a class="nav-link sort-menu" id="v-pills-recent-tab" data-toggle="pill" role="tab" aria-controls="v-pills-settings" aria-selected="false" name="tvdb.release_date">
+                    Release dates <i class="material-icons arrow-right"></i></a>
             </div>
+
+
+            <h5>View</h5>
+            <div class="nav flex-column nav-pills" id="v-pills-view-tab" role="tablist" aria-orientation="vertical">
+                <a class="nav-link sort-menu" id="v-pills-genre-tab" data-toggle="pill" role="tab" aria-controls="v-pills-genres" aria-selected="true" name="title">
+                    Genre <i class="material-icons arrow-right"></i></a>
+                <a class="nav-link sort-menu" id="v-pills-fav-tab" data-toggle="pill" role="tab" aria-controls="v-pills-favorites" aria-selected="false" name="rating">
+                    Favorites <i class="material-icons arrow-right"></i></a>
+             </div>
+
         </div>
 
         <div class="col-12">
@@ -132,8 +144,10 @@
 
                 <hr>
 
-
-                <div class="find-movie-loader text-center p-4 m-4">
+                <div  class="search-text">
+                    Search for a movie or add one manually.
+                </div>
+                <div class="find-movie-loader text-center p-4 m-4 hide">
                     <img src="images/loader.svg" class="img-fluid">
                 </div>
 

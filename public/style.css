@@ -1,10 +1,13 @@
+@import url('https://fonts.googleapis.com/css?family=Lobster|Play');
+
 html, body {
     height: 100%;
     background-color: #000;
     background-image: url("images/bg.png");
     margin:0;
     padding:0;
-
+        font-family: 'Play', sans-serif;      
+                                              
 }
 
 .loading-container {
@@ -12,7 +15,10 @@ html, body {
     text-align: center;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.75);
+    padding-left: 25%;
+    margin-top: 20%;
+    border: transparent;
+    border 0;
 }
 
 .page-container {
@@ -20,6 +26,11 @@ html, body {
     width: 100%;
     padding-top: 120px;
     height: 100%;
+}
+
+.navbar-brand {
+    font-family: 'Play', sans-serif;
+    
 }
 
 .bg-container {
@@ -123,6 +134,25 @@ html, body {
     color: #fff;
 }
 
+.arrow-right {
+    float: right;
+}
+.nav-link {
+        padding-right: 0.30rem;
+  
+}
+
+.add-text {
+    vertical-align: center;
+    position: relative;
+    padding-left: 20px;
+}
+
+.add-text i {
+    left: -8px;
+    position: absolute;
+}
+
 
 .movie-database button {
     color: #fff;
@@ -142,6 +172,18 @@ html, body {
 
 }
 
+
+.movie-database button.favorite {
+    position: absolute;
+    top: -220px;
+    color: #ffea32;
+    left: 0px;
+    border: transparent;
+    background-color: transparent;
+    font-size: 10px;
+    cursor: pointer;
+
+}
 .movie-database button.edit {
     position: absolute;
     top:-55px;
@@ -164,6 +206,8 @@ html, body {
 
 }
 
+
+
 #movie-full {
 
     width: 100%;
@@ -180,5 +224,52 @@ html, body {
 }
 .back-full {
     cursor: pointer;
+}
+
+.movie-search {
+
+}
+
+.movie-search button.add{
+    width: 35px;
+    height: 35px;
+    padding-left: 5px;
+}
+
+button.add i {
+    padding-top: 3px;
+    margin: 0;
+}
+
+
+.loader-bg {
+
+    background: url("images/loader.svg");
+    background-size : cover;
+
+
+}
+.movie-search-overview {
+    font-size: 10px;
+    color: grey;
+    margin-bottom: 3px;
+    padding-bottom: 0px;
+}
+
+.movie-search-year {
+  padding-top: 3px;
+    margin-top: 0px;
+}
+
+.movie-search-img img {
+    background: #ccc;
+    border: 2px solid #ccc;
+    box-shadow: -1px 0px 8px rgba(0, 0, 0, 0.80);
+    -moz-box-shadow: -1px 0px 8px rgba(0, 0, 0, 0.80);
+    -webkit-box-shadow: -1px 0px 8px rgba(0, 0, 0, 0.80);
+}
+
+.movie-search-title {
+    color: #000;
 }
 

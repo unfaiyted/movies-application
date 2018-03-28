@@ -15,12 +15,14 @@ let delay = makeDelay(1000);
 
 sayHello('Dane');
 
-// Creates the primary movie list
-function movieList(query, sortBy) {
-    if (typeof query === 'undefined') { query = ''; }
-    if (typeof sortBy === 'undefined') { sortBy = ''; }
+function setFav() {
 
-    getMovies(query, sortBy).then((movies) => {
+}
+
+// Creates the primary movie list
+function movieList(query, sortBy, order) {
+
+    getMovies(query, sortBy, order).then((movies) => {
         //console.log('Here are all the movies:');
         movies.forEach(({title, rating, id, tvdb, imdb_id}) => {
 //    console.log(`id#${id} - ${title} - rating: ${rating}`);
@@ -30,8 +32,8 @@ function movieList(query, sortBy) {
 
             if (tvdb) {
                 console.log('data exists for tvdb');
-                moviePoster = 'https://image.tmdb.org/t/p/w500/' + tvdb.poster_path;
-                movieBackdrop = 'https://image.tmdb.org/t/p/original/' + tvdb.backdrop_path;
+                if(tvdb.poster_path !== null) moviePoster = 'https://image.tmdb.org/t/p/w500/' + tvdb.poster_path;
+                if(tvdb.backdrop_path !== null) movieBackdrop = 'https://image.tmdb.org/t/p/original/' + tvdb.backdrop_path;
 
             }
 
@@ -45,26 +47,27 @@ function movieList(query, sortBy) {
                     $(`<button id="update-movie-${id}" class="update" value="${id}">`).html("<i class=\"material-icons\">autorenew</i>"),
                     $(`<button id="edit-movie-${id}" class="edit" value="${id}">`).html('<i class="material-icons">create</i>'),
                     $(`<button id="delete-movie-${id}" class="delete" value="${id}">`).html('<i class="material-icons">delete_forever</i>'),
+                    $(`<button id="fav-movie-${id}" class="favorite" value="${id}">`).html('<i class="material-icons">star_border</i>'),
                 )).appendTo('#moviesList');
 
 
-            $(`#img-${id}, #update-movie-${id}, #edit-movie-${id}, #delete-movie-${id}`).hover(function () {
+            $(`#img-${id}, #update-movie-${id}, #edit-movie-${id}, #delete-movie-${id}, #fav-movie-${id}`).hover(function () {
                 $('.bg-container').css('background-image', `url('${movieBackdrop}')`);
                 $(`#img-${id}`).addClass('standard-hover');
-                $(`#update-movie-${id}`).css('opacity',0.6);
-                $(`#edit-movie-${id}`).css('opacity',0.6);
-                $(`#delete-movie-${id}`).css('opacity',0.6);
+                $(`#update-movie-${id}, #edit-movie-${id}, #delete-movie-${id}, #fav-movie-${id}`).css('opacity',0.6);
 
             }, function () {
-                $(`#update-movie-${id}`).css('opacity',0);
-                $(`#edit-movie-${id}`).css('opacity',0);
-                $(`#delete-movie-${id}`).css('opacity',0);
+                $(`#update-movie-${id}, #edit-movie-${id}, #delete-movie-${id}, #fav-movie-${id}`).css('opacity',0.0);
                 $(`#img-${id}`).removeClass('standard-hover');
 
             });
 
             $(`#img-${id}`).click(function() {
                      displayMovie(id);
+            });
+
+            $(`#fav-movie-${id}`).click(function() {
+                    setFav(id);
             });
 
             $(`#delete-movie-${id}`).click(function () {
@@ -192,6 +195,19 @@ function makeDelay(ms) {
     };
 };
 
+function limitStrLength(string, maxLen) {
+
+    let len = string.length;
+
+    if(len>maxLen)
+    {
+        return(string.substr(0,maxLen)+'...');
+    }
+
+    return string;
+
+}
+
 // Add Movie
 $(`#submit-new-movie`).click(function (e) {
     e.preventDefault();
@@ -217,47 +233,80 @@ $(`#submit-new-movie`).click(function (e) {
 
 });
 
-$('#find-movies').click(function (e) {
-    e.preventDefault();
 
+
+const callbackSearchMovie = function () {
     //clear last search data.
-    $('#movie-search-list').empty();
-    $('.find-movie-loader').show();
+        $('#movie-search-list').empty();
+        $('.find-movie-loader').show();
 
-    let query = $('#movie-search-input').val();
+        let query = $('#movie-search-input').val();
 
-    //add movies
-    searchMovieDBData(query).then((movies) => {
+        //add movies
+        searchMovieDBData(query).then((movies) => {
 
-        console.log(movies.results);
+            console.log(movies.results);
 
-        movies.results.forEach((movie) => {
+            movies.results.forEach((movie) => {
+
+                $('.find-movie-loader').hide();
+
+                $(`<div class="movie-search p-2 m-2 row" id="movie-${movie.id}">`).append(
+                    $('<div class="movie-search-img col-3">').append(
+                        $(`<img src="https://image.tmdb.org/t/p/w500/${movie.poster_path}" id="img-${movie.id}" class="img-fluid main">`)),
+                    $('<div class="movie-search-title col-8">').text(movie.title).append(
+                        $(`<p class="movie-search-overview">`).text(limitStrLength(movie.overview, 200)),
+                        $(`<p class="movie-search-year">`).text(movie.release_date.substr(0,4))),
+                    $('<div class="movie-search-database col-1">').append(
+                        $(`<img src="images/loader.svg" class="loading-data hide" id="loading-movie-${movie.id}">`).text(''),
+                        $(`<input type="hidden" id="id-${movie.id}"  value="${movie.id}">`).text(''),
+                        $(`<button id="add-movie-${movie.id}" class="add" value="${movie.id}">`).html('<i class="material-icons">add</i>'),
+                    )).appendTo('#movie-search-list');
 
 
-            $('.find-movie-loader').hide();
+                $(`#add-movie-${movie.id}`).click(function () {
 
-            $(`<div class="movie-search p-2 m-2" id="movie-${movie.id}">`).append(
-                $('<div class="movie-search-img">').append(
-                    $(`<img src="https://image.tmdb.org/t/p/w500/${movie.poster_path}" id="img-${movie.id}" class="img-fluid main">`)),
-                $('<div class="movie-search-title text-truncate">').text(movie.title),
-                $('<div class="movie-search-database">').append(
-                    $(`<img src="images/loader.svg" class="loading-data hide" id="loading-movie-${movie.id}">`).text(''),
-                    $(`<input type="hidden" id="id-${movie.id}"  value="${movie.id}">`).text(''),
-                    $(`<button id="add-movie-${movie.id}" class="add" value="${movie.id}">`).html('<i class="material-icons">add</i>'),
-                )).appendTo('#movie-search-list');
+                    $(this).prop('disabled', true);
+                    $(this).html("&nbsp;");
+                    $(this).addClass('loader-bg');
 
+                    //$(this).addClass('hide').append($(`<img src="images/loader.svg" class="img-fluid">`).text());
 
+                    getFullMovieData($(this).val()).then((movie) => {
 
+                        addMovie({
+                            title: movie.title,
+                                rating: movie.vote_average,
+                            tvdb: movie
+                        }).then((response) => {
+
+                          console.log(response);
+                          console.log('movie added?');
+
+                            $(this).removeClass('loader-bg');
+                            $(`#add-movie-${movie.id}`).html('<i class="material-icons">check</i>').removeClass('hide');
+
+                          // reload movie list
+                            $('#moviesList').empty();
+                            movieList();
+
+                        });
+
+                    });
+
+                });
+
+            });
         });
-    });
 
 
+    }
     //display none found dialog
 
-
-
-
-})
+$('#find-movies').click(callbackSearchMovie);
+$("#movie-search-input").keypress(function() {
+    if (event.which == 13) callbackSearchMovie();
+});
 
 $('#search-movies').on('input', function () {
 
@@ -289,13 +338,25 @@ $('.sort-menu').click(function () {
     $('.sort-menu').attr('aria-selected','false');
     $(this).attr('aria-selected','true');
 
+
+    let order = 'asc';
+
+    $(this).children('i').text(function(parent, arrow) {
+        $('i.arrow-right').text('');
+        order = (arrow === 'arrow_drop_up') ? 'asc' : 'desc';
+        return (arrow === 'arrow_drop_up') ? 'arrow_drop_down' : 'arrow_drop_up';
+    });
+
+
+
    console.log($(this).attr('name'));
 
     $('#moviesList').empty();
-    movieList($('#search-movies').val(),$(this).attr('name'));
+
+    console.log(order);
+    movieList($('#search-movies').val(),$(this).attr('name'), order);
 
 });
-
 
 /* current time */
 setInterval(function () {
@@ -318,3 +379,5 @@ setInterval(function () {
 
 // Generates default movie list
 movieList();
+
+
