@@ -8,7 +8,7 @@
  * require style imports
  */
 const $ = require('jquery');
-const {getMovies, getMovieDBData, deleteMovie, addMovie, addMovieData, getFullMovieData, getMovie} = require('./api.js');
+const {getMovies, getMovieDBData, deleteMovie, addMovie, addMovieData, getFullMovieData, getMovie, searchMovieDBData} = require('./api.js');
 const {sayHello} = require('./hello.js');
 
 let delay = makeDelay(1000);
@@ -217,6 +217,48 @@ $(`#submit-new-movie`).click(function (e) {
 
 });
 
+$('#find-movies').click(function (e) {
+    e.preventDefault();
+
+    //clear last search data.
+    $('#movie-search-list').empty();
+    $('.find-movie-loader').show();
+
+    let query = $('#movie-search-input').val();
+
+    //add movies
+    searchMovieDBData(query).then((movies) => {
+
+        console.log(movies.results);
+
+        movies.results.forEach((movie) => {
+
+
+            $('.find-movie-loader').hide();
+
+            $(`<div class="movie-search p-2 m-2" id="movie-${movie.id}">`).append(
+                $('<div class="movie-search-img">').append(
+                    $(`<img src="https://image.tmdb.org/t/p/w500/${movie.poster_path}" id="img-${movie.id}" class="img-fluid main">`)),
+                $('<div class="movie-search-title text-truncate">').text(movie.title),
+                $('<div class="movie-search-database">').append(
+                    $(`<img src="images/loader.svg" class="loading-data hide" id="loading-movie-${movie.id}">`).text(''),
+                    $(`<input type="hidden" id="id-${movie.id}"  value="${movie.id}">`).text(''),
+                    $(`<button id="add-movie-${movie.id}" class="add" value="${movie.id}">`).html('<i class="material-icons">add</i>'),
+                )).appendTo('#movie-search-list');
+
+
+
+        });
+    });
+
+
+    //display none found dialog
+
+
+
+
+})
+
 $('#search-movies').on('input', function () {
 
     delay(function () {
@@ -254,6 +296,7 @@ $('.sort-menu').click(function () {
 
 });
 
+
 /* current time */
 setInterval(function () {
 
@@ -272,7 +315,6 @@ setInterval(function () {
         $("#clock").html(time);
 
     }, 1000);
-
 
 // Generates default movie list
 movieList();

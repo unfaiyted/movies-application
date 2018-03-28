@@ -11,8 +11,6 @@
 
 <div id="movie-full" class="hide">
 
-
-
     <div class="container">
 
         <!-- Header of Full Movie Data view -->
@@ -69,13 +67,17 @@
         </div>
         <div class="form-inline">
             <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-            <i class="material-icons" aria-label="Add">note_add</i>
+
             <div class="add">
                 <form method="post" id="addMovie">
                     <input type="hidden" name="title" value="Test Movie">
                     <input type="hidden" name="rank" value="7">
                     <input type="hidden" name="id" value="tt0167260">
-                    <button type="submit" id="submit-new-movie">Add Movie</button>
+                    <!--<button type="submit" id="submit-new-movie">Add Movie</button>-->
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#add-movie-menu">
+                        <i class="material-icons" aria-label="Add">note_add</i> Add movie
+                    </button>
+
                 </form>
             </div>
         </div>
@@ -101,16 +103,54 @@
         </div>
 
         <div class="col-12">
-
             <div class="loading-container">
                 <img src="images/loader.svg">
             </div>
                 <div class="d-flex flex-row flex-wrap justify-content-between"  id="moviesList">
                 </div>
-
         </div>
 
 </div>
+
+<div class="modal fade" id="add-movie-menu" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Add movie</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" id="movie-search-input" placeholder="Movie Lookup" aria-label="Find Movie" aria-describedby="basic-addon2">
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-secondary" type="button" id="find-movies">Search</button>
+                    </div>
+                </div>
+
+                <hr>
+
+
+                <div class="find-movie-loader text-center p-4 m-4">
+                    <img src="images/loader.svg" class="img-fluid">
+                </div>
+
+                <div id="movie-search-list">
+                </div>
+
+            </div>
+            <div class="modal-footer">
+
+                <button type="button"  class="btn btn-secondary" >Manual add...</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 
 <footer>
 

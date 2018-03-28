@@ -54,6 +54,21 @@ module.exports = {
         return fetch(`https://api.themoviedb.org/3/find/${external_id}?api_key=${data.api_key}&language=${data.langauge}&external_source=${data.external_source}`)
             .then(response => response.json());
     },
+    searchMovieDBData: (query) => {
+        const data= {
+            "api_key": '0c3cf3e726b6d3566fbe38b74c239e5b',
+            "langauge": 'en-US',
+            "external_source": 'imdb_id',
+            "page": 1,
+            "include_adult": false
+        };
+
+        query = encodeURIComponent(query);
+        //https://api.themoviedb.org/3/search/movie?api_key=0c3cf3e726b6d3566fbe38b74c239e5b&language=en-US&query=American%20Pie
+        return fetch(`https://api.themoviedb.org/3/search/movie?api_key=${data.api_key}&language=${data.langauge}&query=${query}&include_adult=${data.include_adult}`)
+            .then(response => response.json());
+
+    },
     getFullMovieData: (movDB_id) => {
         const data= {
             "api_key": '0c3cf3e726b6d3566fbe38b74c239e5b',
