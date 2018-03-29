@@ -7,28 +7,26 @@
 /**
  * require style imports
  */
-const $ = require('jquery');
-const {getMovies, getMovieDBData, deleteMovie, addMovie, addMovieData, getFullMovieData, getMovie, searchMovieDBData} = require('./api.js');
+// const $ = require('jquery');
+const {getMovies, getMovieDBData, deleteMovie, addMovie, addMovieData, getFullMovieData, getMovie, searchMovieDBData, addFav} = require('./api.js');
 const {sayHello} = require('./hello.js');
 
 let delay = makeDelay(1000);
 
 sayHello('Dane');
 
-function setFav() {
-
-}
-
 // Creates the primary movie list
 function movieList(query, sortBy, order) {
 
     getMovies(query, sortBy, order).then((movies) => {
         //console.log('Here are all the movies:');
-        movies.forEach(({title, rating, id, tvdb, imdb_id}) => {
+        movies.forEach(({title, rating, id, tvdb, imdb_id, fav}) => {
 //    console.log(`id#${id} - ${title} - rating: ${rating}`);
 
             let moviePoster = "images/placeholder.png";
             let movieBackdrop = "";
+            let star = 'star_border';
+            let favStar = '';
 
             if (tvdb) {
                 console.log('data exists for tvdb');
@@ -36,6 +34,9 @@ function movieList(query, sortBy, order) {
                 if(tvdb.backdrop_path !== null) movieBackdrop = 'https://image.tmdb.org/t/p/original/' + tvdb.backdrop_path;
 
             }
+
+           star =  (fav === true) ? 'star' : 'star_border';
+            favStar =  (fav === true) ? 'favorite-true' : '';
 
             $(`<div class="movie p-2 m-2" id="movie-${id}">`).append(
                 $('<div class="movie-img">').append(
@@ -47,7 +48,7 @@ function movieList(query, sortBy, order) {
                     $(`<button id="update-movie-${id}" class="update" value="${id}">`).html("<i class=\"material-icons\">autorenew</i>"),
                     $(`<button id="edit-movie-${id}" class="edit" value="${id}">`).html('<i class="material-icons">create</i>'),
                     $(`<button id="delete-movie-${id}" class="delete" value="${id}">`).html('<i class="material-icons">delete_forever</i>'),
-                    $(`<button id="fav-movie-${id}" class="favorite" value="${id}">`).html('<i class="material-icons">star_border</i>'),
+                    $(`<button id="fav-movie-${id}" class="favorite ${favStar}" value="${id}">`).html(`<i class="material-icons">${star}</i>`),
                 )).appendTo('#moviesList');
 
 
@@ -55,19 +56,32 @@ function movieList(query, sortBy, order) {
                 $('.bg-container').css('background-image', `url('${movieBackdrop}')`);
                 $(`#img-${id}`).addClass('standard-hover');
                 $(`#update-movie-${id}, #edit-movie-${id}, #delete-movie-${id}, #fav-movie-${id}`).css('opacity',0.6);
+                $('.favorite-true').css('opacity',1);
 
             }, function () {
                 $(`#update-movie-${id}, #edit-movie-${id}, #delete-movie-${id}, #fav-movie-${id}`).css('opacity',0.0);
                 $(`#img-${id}`).removeClass('standard-hover');
+                $('.favorite-true').css('opacity',1);
 
             });
+
 
             $(`#img-${id}`).click(function() {
                      displayMovie(id);
             });
 
+            $(`#edit-movie-${id}`).click(function () {
+                displayEditMovie(id);
+            });
+
             $(`#fav-movie-${id}`).click(function() {
-                    setFav(id);
+
+                    let star =  $(this).children('i').text();
+                    console.log(star);
+                 (star !== 'star') ? $(this).children('i').text('star') : $(this).children('i').text('star_border');
+                 (star !== 'star') ?  addFav(id, true) : addFav(id,false);
+                (star !== 'star') ?  $(this).addClass('favorite-true') : $(this).removeClass('favorite-true');
+
             });
 
             $(`#delete-movie-${id}`).click(function () {
@@ -166,15 +180,32 @@ function displayMovie(id) {
         $(`#movie-big-img`).attr('src', `https://image.tmdb.org/t/p/w500/${m.tvdb.poster_path}`);
         $('#movie-overview').text(m.tvdb.overview);
         $('#movie-big-title').text(m.title);
+        $('#movie-big-year').text(m.tvdb.release_date.substr(0,4));
+        $('#movie-big-runtime').text(m.tvdb.runtime);
+        $('#movie-big-budget').text('$'+ m.tvdb.budget.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, '$1,'));
+        $('#movie-big-revenue').text('$'+ m.tvdb.revenue.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, '$1,'));
         $('#movie-big-rating').text(m.rating);
         $('#movie-big-votes').text(m.tvdb.vote_count);
-        $('#movie-big-genres').text(function () {
+        $('#movie-big-genres').html(function () {
             let list =  ''
             m.tvdb.genres.forEach(function (item) {
-               list += item.name +', '
+               list += `<span class="badge badge-primary">${item.name}</span> `;
+
+                //<span class="badge badge-default">Default</span>
             });
             return list;
         });
+
+        $('#movie-big-languages').html(function () {
+            let list =  ''
+            m.tvdb.spoken_languages.forEach(function (item) {
+                list += `<span class="badge badge-light">${item.name}</span> `;
+
+                //<span class="badge badge-default">Default</span>
+            });
+            return list;
+        });
+
         $('#movie-big-release').text(m.tvdb.release_date);
         $('#movie-big-tagline').text(m.tvdb.tagline);
         // $('#movie-big-release-date').text(m.tvdb.release_date);
@@ -185,6 +216,71 @@ function displayMovie(id) {
 
 
 }
+
+function displayEditMovie(id) {
+
+    //Loading Spinner
+    getMovie(id).then(movie => {
+        const m = movie;
+
+        console.log(m);
+
+        $(`#movie-edit-img`).attr('src', `https://image.tmdb.org/t/p/w500/${m.tvdb.poster_path}`);
+        $('#movie-edit-title').val(m.title);
+        $('#movie-edit-rating').val(m.rating);
+        $('#movie-edit-id').val(m.id);
+
+        (m.fav === true) ? $('#movie-fav-check').prop('checked', true) : $('#movie-fav-check').prop('checked', false)
+
+        $('#edit-movie-menu').modal('show');
+
+
+
+    });
+
+}
+
+$('#movie-edit-submit').click(function () {
+
+    //get full movie data based on id
+    getMovie($('#movie-edit-id').val()).then((movie) => {
+
+        movie.title     =  $('#movie-edit-title').val();
+        movie.rating    =  $('#movie-edit-rating').val();
+        movie.fav       =  ($('#movie-fav-check').is(':checked')) ? true : false;
+        ($('#movdb-edit-check').is(':checked')) ? delete movie.tvdb : false;
+
+
+            addMovieData($('#movie-edit-id').val(),movie).then((response) => {
+
+                // reload movie list
+                $('#moviesList').empty();
+                movieList();
+
+                //close modal
+                $('#edit-movie-menu').modal('hide');
+
+            });
+
+
+
+
+
+    });
+
+
+    //update values in movie object to new valuse
+
+    //save changes
+
+
+
+});
+
+
+
+
+
 
 // Delay function to prevent too many requests sent to server repeatedly.
 function makeDelay(ms) {
@@ -280,8 +376,6 @@ const callbackSearchMovie = function () {
                             tvdb: movie
                         }).then((response) => {
 
-                          console.log(response);
-                          console.log('movie added?');
 
                             $(this).removeClass('loader-bg');
                             $(`#add-movie-${movie.id}`).html('<i class="material-icons">check</i>').removeClass('hide');

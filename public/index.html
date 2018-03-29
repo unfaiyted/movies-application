@@ -11,32 +11,68 @@
 
 <div id="movie-full" class="hide">
 
-    <div class="container">
+    <div class="movie-full-container">
 
         <!-- Header of Full Movie Data view -->
         <div class="row">
-            <div class="back-full p-2 ">
+            <div class="back-full p-2 col-4 text-left text-truncate">
                 <i class="material-icons">chevron_left</i>
-                <span id="movie-big-title">Movie Title</span>
+                <span id="movie-big-title" class="text-truncate">Movie Title</span> (<span id="movie-big-year">2001</span>)
+            </div>
+
+            <div class="col-8 text-center">
+                <p id="movie-big-tagline">Tagline of Movie </p>
             </div>
 
         </div>
-
-
 
         <div class="row">
             <div class="col-4">
                 <img src="images/placeholder.png" alt="Placeholder" class="img-fluid" id="movie-big-img">
                 <span id="movie-big-rating">1</span><span>/10 </span> (<span id="movie-big-votes"></span> votes)
+                <span id="movie-big-genres"></span>
             </div>
             <div class="col-8">
                 <div class="movie-big-overview">
-                    <p id="movie-overview">???? </p>
-                    <hr>
-                    <span>Genres: </span> <span id="movie-big-genres"></span>
-                    <span>Release Date: </span>  <span id="movie-big-release"></span>
-                    <span id="movie-big-imdb"><a href="#">IMDB</a></span>
-                    <span id="movie-big-tagline">Tagline of Movie </span>
+
+                    <div class="row">
+                        <p id="movie-overview" class="text-left">???? </p>
+                        <div class="container">
+                        <div class="row p-2"><span class="align-text-top">Release Date: </span> <span id="movie-big-release"></span></div>
+                        <div class="row p-2"><span class="align-text-top">Runtime: </span>  <span id="movie-big-runtime"></span></div>
+                        <div class="row p-2"><span class="align-text-top">Budget: </span>  <span id="movie-big-budget"></span></div>
+                        <div class="row p-2"><span class="align-text-top">Revenue: </span>  <span id="movie-big-revenue"></span></div>
+
+
+                            <div class="row p-2">
+                                Languages:
+                                <span id="movie-big-languages"></span>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                    <div class="row align-text-bottom">
+
+
+
+
+                        <div class="btn-group mr-2" role="group" aria-label="First group">
+                            <button type="button" class="btn btn-secondary">IMDB</button>
+                            <button type="button" class="btn btn-secondary">MovieDB</button>
+                            <button type="button" class="btn btn-secondary">Internal</button>
+                            <button type="button" class="btn btn-secondary">Trailer</button>
+                        </div>
+
+
+                        </div>
+
+                    </div>
+
+
+
 
 
                 </div>
@@ -108,7 +144,7 @@
             <div class="nav flex-column nav-pills" id="v-pills-view-tab" role="tablist" aria-orientation="vertical">
                 <a class="nav-link sort-menu" id="v-pills-genre-tab" data-toggle="pill" role="tab" aria-controls="v-pills-genres" aria-selected="true" name="title">
                     Genre <i class="material-icons arrow-right"></i></a>
-                <a class="nav-link sort-menu" id="v-pills-fav-tab" data-toggle="pill" role="tab" aria-controls="v-pills-favorites" aria-selected="false" name="rating">
+                <a class="nav-link sort-menu" id="v-pills-fav-tab" data-toggle="pill" role="tab" aria-controls="v-pills-favorites" aria-selected="false" name="fav">
                     Favorites <i class="material-icons arrow-right"></i></a>
              </div>
 
@@ -160,6 +196,85 @@
                 <button type="button"  class="btn btn-secondary" >Manual add...</button>
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                 <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div class="modal fade" id="edit-movie-menu" tabindex="-1" role="dialog" aria-labelledby="Edit Movie" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="edit-movie-title">Edit movie</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+
+
+                <div class="row text-center m-2 p-2">
+                    <div class="col-4"></div>
+                    <div class="col-4"> <img src="images/placeholder.png" class="img-fluid" id="movie-edit-img"></div>
+                    <div class="col-4"></div>
+                </div>
+
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="title-edit">Title</span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="Title" aria-label="movie-title" aria-describedby="movie-title" id="movie-edit-title">
+                </div>
+
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="rating-edit">Rating</span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="Rating " aria-label="movie" aria-describedby="basic-addon1" id="movie-edit-rating">
+                </div>
+
+
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="movie-fav-check">
+                    <label class="form-check-label" for="movie-fav-check">
+                        Favorite
+                    </label>
+                </div>
+
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="movdb-edit-check">
+                    <label class="form-check-label" for="movdb-edit-check">
+                        Remove movieDB data
+                    </label>
+
+                    <input type="hidden" name="movie-edit-id" id="movie-edit-id" value="">
+
+                </div>
+
+                <!--<div class="input-group mb-3">-->
+                    <!--<input type="text" class="form-control" id="movie-search-input" placeholder="Movie Lookup" aria-label="Find Movie" aria-describedby="basic-addon2">-->
+                    <!--<div class="input-group-append">-->
+                        <!--<button class="btn btn-outline-secondary" type="button" id="find-movies">Search</button>-->
+                    <!--</div>-->
+                <!--</div>-->
+
+                <!--<div  class="search-text">-->
+                    <!--Search for a movie or add one manually.-->
+                <!--</div>-->
+                <div class="find-movie-loader text-center p-4 m-4 hide">
+                    <img src="images/loader.svg" class="img-fluid">
+                </div>
+
+                <div id="movie-data-list">
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" id="movie-edit-submit">Save changes</button>
             </div>
         </div>
     </div>

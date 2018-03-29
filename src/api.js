@@ -25,6 +25,15 @@ module.exports = {
             }).then(response => response.json());
 
     },
+    addFav: (id,fav) => {
+        module.exports.getMovie(id).then((movie) => {
+            movie.fav = fav;
+            module.exports.addMovieData(id, movie);
+            console.log('done');
+
+        });
+
+    },
     //Change value of data in movies
     editMovie: (id) => {
 

@@ -178,11 +178,17 @@ html, body {
     top: -220px;
     color: #ffea32;
     left: 0px;
+
     border: transparent;
     background-color: transparent;
     font-size: 10px;
     cursor: pointer;
 
+}
+
+.favorite-true {
+     opacity: 1;
+    text-shadow: 2px 2px 4px #000000;
 }
 .movie-database button.edit {
     position: absolute;
@@ -207,21 +213,72 @@ html, body {
 }
 
 
+  /*
+
+  Movie Overlay CSS
+
+  */
+.movie-full-container {
+    margin: 30px;
+    height: 100vh ;
+}
 
 #movie-full {
 
     width: 100%;
-    height: 100%;
+    height: calc(100% + 100px);
+   
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+
     text-shadow: 1px 1px 25px rgba(0, 0, 0, 1);
     color: #fff;
     text-align: center;
-    padding-top: 100px;
+    padding-top: 0;
     background-color: rgba(0, 0, 0, 0.90);
     float: left;
     position: fixed;
     z-index: 100000 !important;
 
 }
+
+.movie-big-overview {
+
+
+}
+
+#movie-big-img img {
+
+      background: #ccc;
+      border: 2px solid #ccc;                                        
+      position:relative;                                             
+      box-shadow: -1px 0px 8px rgba(0, 0, 0, 0.80);                  
+      -moz-box-shadow: -1px 0px 8px rgba(0, 0, 0, 0.80);             
+      -webkit-box-shadow: -1px 0px 8px rgba(0, 0, 0, 0.80);          
+    
+}
+
+#movie-big-img {
+    background: #ccc;
+    border: 2px solid #fff;
+}
+
+
+#movie-big-tagline {
+    vertical-align: center;
+    padding-top: 20px;
+}
+#movie-big-title {
+    font-size: 30px;
+}
+
+#movie-overview p {
+    text-align: left;
+}
+
+
 .back-full {
     cursor: pointer;
 }
